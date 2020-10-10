@@ -53,6 +53,12 @@ export default function CadastroFornecedor() {
         <Text style={styles.inputsTextLabel}>Serviços</Text>
         <ScrollView horizontal={true}>
           <CardScroll />
+          <CardScroll />
+          <CardScroll />
+          <CardScroll />
+          <CardScroll />
+          <CardScroll />
+          <CardScroll />
         </ScrollView>
       </View>
     </View>
