@@ -1,6 +1,6 @@
 import React from 'react'
 import {View} from 'react-native'
-import Star from './Star'
+import Star from '../Star'
 
 export default function Stars() {
   return (
