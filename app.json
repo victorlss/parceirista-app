@@ -1,0 +1,12 @@
+{
+  "name": "Parceirista",
+  "displayName": "Parceirista",
+  "expo": {
+    "name": "Parceirista",
+    "slug": "Parceirista",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
