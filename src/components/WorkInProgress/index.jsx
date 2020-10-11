@@ -1,8 +1,6 @@
 import React from 'react'
-import {View, Text, TouchableHighlight, TouchableOpacity} from 'react-native'
+import {View, Text} from 'react-native'
 import styles from './styles'
-import Icon from 'react-native-vector-icons/FontAwesome5'
-import {RectButton} from 'react-native-gesture-handler'
 
 export default function WorkInProgress(props) {
   const {theme} = props;
@@ -12,7 +10,8 @@ export default function WorkInProgress(props) {
     <View style={style.container}>
       <View style={style.leftView}>
         <Text style={[style.text, style.textColorLeftView]}>Recebido</Text>
-        <Text style={[style.text, style.textColorLeftView]}>R$ 250,00</Text>
+        <Text style={[style.textBold, style.textColorLeftView]}>R$ 250,00</Text>
+        <Text style={[style.text, style.textColorLeftView]}>PROGRESS_BAR</Text>
       </View>
       <View style={style.rigthView}>
         <Text style={style.textBold}>Multi Assessoria</Text>
