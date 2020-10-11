@@ -1,6 +1,8 @@
 import React from 'react'
 import {View, Text} from 'react-native'
+import ProgressBar from '../ProgressBar';
 import styles from './styles'
+
 
 export default function WorkInProgress(props) {
   const {theme} = props;
@@ -11,7 +13,7 @@ export default function WorkInProgress(props) {
       <View style={style.leftView}>
         <Text style={[style.text, style.textColorLeftView]}>Recebido</Text>
         <Text style={[style.textBold, style.textColorLeftView]}>R$ 250,00</Text>
-        <Text style={[style.text, style.textColorLeftView]}>PROGRESS_BAR</Text>
+        <ProgressBar progress={0.4} width={100} height={20} color='white'/>
       </View>
       <View style={style.rigthView}>
         <Text style={style.textBold}>Multi Assessoria</Text>
