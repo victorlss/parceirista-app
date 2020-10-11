@@ -1,6 +1,6 @@
 import React from 'react'
-import { View, Image, Text, CheckBox } from 'react-native'
-import { RectButton, ScrollView, TextInput } from 'react-native-gesture-handler'
+import { View, Image, Text, CheckBox, TouchableOpacity } from 'react-native'
+import { ScrollView, TextInput } from 'react-native-gesture-handler'
 // import CheckBox from '@react-native-community/checkbox'
 import CardScroll from '../../../components/CardScroll'
 import LineSeparator from '../../../components/LineSeparator'
@@ -86,9 +86,9 @@ export default function SignUp(props) {
         />
       </View>
       <View style={styles.buttonView}>
-        <RectButton style={styles.buttonWrapper} onPress={() => props.navigation.navigate('ProfessionalNavigation')}>
+        <TouchableOpacity style={styles.buttonWrapper} onPress={() => props.navigation.navigate('ProfessionalNavigation')}>
           <Text style={styles.textWrapper}>SER UM PARCEIRO</Text>
-        </RectButton>
+        </TouchableOpacity>
       </View>
     </ScrollView>
   )
