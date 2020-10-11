@@ -7,7 +7,7 @@ export default function Home(props) {
   return (
     <View style={styles.container}>
       <View style={styles.topView}>
-        <Image source={require('../../assets/images/logo@3x.png')} style={styles.logo}/>
+        <Image source={require('../../assets/images/logo.png')} style={styles.logo}/>
         <Text style={styles.message}>
           Crescimento para os primeiros empreendimentos.
         </Text>
