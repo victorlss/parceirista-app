@@ -1,6 +1,5 @@
 import React from 'react'
-import {View, Text, TouchableOpacity, Image} from 'react-native'
-import {ScrollView, TextInput} from 'react-native-gesture-handler'
+import {View, Text, TouchableOpacity, Image, ScrollView, TextInput} from 'react-native'
 import LineSeparator from "../../../components/LineSeparator"
 import Welcome from "../../../components/Welcome";
 import styles from './styles'
