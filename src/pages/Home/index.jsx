@@ -18,9 +18,7 @@ export default function Home(props) {
           <View style={[styles.buttonIcon, {backgroundColor: '#A55EEA'}]}>
             <Icon name="search-dollar" size={20} color="#fff"/>
           </View>
-          <div>
-            <Text style={styles.buttonText}>Buscar um parceiro</Text>
-          </div>
+          <Text style={styles.buttonText}>Buscar um parceiro</Text>
         </TouchableOpacity>
         <TouchableOpacity style={[styles.button, {backgroundColor: '#FFB67B'}]}
                           onPress={() => props.navigation.navigate('Seja um parceiro')}>
