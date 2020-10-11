@@ -1,40 +1,38 @@
 import React from 'react'
 import { View, Text } from 'react-native'
-import ProfileInfo from '../../../components/ProfileInfo'
-import ProfileSignName from '../../../components/ProfileSignName'
 import styles from './style'
-import LineSeparator from '../../../components/LineSeparator'
 import { TextInput, TouchableOpacity } from 'react-native-gesture-handler'
 import LargeButton from '../../../components/LargeButton'
+import ProfileHeader from '../../../components/ProfileHeader'
+import FullInput from '../../../components/FullInput'
 
-export default function Home() {
+export default function Home(props) {
   return (
     <View style={styles.containerWrapper}>
-      <View style={styles.profileWrapper}>
-        <ProfileInfo />
-        <ProfileSignName />
-      </View>
-      <LineSeparator />
+      <ProfileHeader
+        name="Priscila Tavares"
+        url="https://avatars1.githubusercontent.com/u/54149914?s=460&u=e6a4306816a79fdcf1f4927c265ede6adcfb5a33&v=4"
+        />
       <View style={styles.inputsView}>
         <Text style={styles.inputsTextLabel}>Dados Pessoais</Text>
-        <TextInput
-          placeholder="Nome"
-          style={styles.textInput}
+        <FullInput
+          professional
+          name="Nome"
           onChangeText={(text) => console.log(text)}
         />
-        <TextInput
-          placeholder="CPF/CNPJ"
-          style={styles.textInput}
+        <FullInput
+          professional
+          name="CPF/CNPJ"
           onChangeText={(text) => console.log(text)}
         />
-        <TextInput
-          placeholder="Telefone"
-          style={styles.textInput}
+        <FullInput
+          professional
+          name="Telefone"
           onChangeText={(text) => console.log(text)}
         />
-        <TextInput
-          placeholder="Email"
-          style={styles.textInput}
+        <FullInput
+          professional
+          name="Email"
           onChangeText={(text) => console.log(text)}
         />
       </View>

@@ -1,21 +1,18 @@
 import React from 'react'
 import { View, Text } from 'react-native'
-import ProfileInfo from '../../../components/ProfileInfo'
-import ProfileSignName from '../../../components/ProfileSignName'
 import styles from './style'
-import LineSeparator from '../../../components/LineSeparator'
 import Stars from '../../../components/Stars'
 import { RectButton, ScrollView } from 'react-native-gesture-handler'
 import DemandCard from '../../../components/DemandCard'
+import ProfileHeader from '../../../components/ProfileHeader'
 
 export default function Home() {
   return (
     <View style={styles.containerWrapper}>
-      <View style={styles.profileWrapper}>
-        <ProfileInfo />
-        <ProfileSignName />
-      </View>
-      <LineSeparator />
+      <ProfileHeader 
+        name="Priscila Tavares"
+        url="https://avatars1.githubusercontent.com/u/54149914?s=460&u=e6a4306816a79fdcf1f4927c265ede6adcfb5a33&v=4"
+        />
       <View style={styles.saldoContainerWrapper}>
         <Text style={styles.saldoTextLigth}>
           Saldo Total{'\n'}

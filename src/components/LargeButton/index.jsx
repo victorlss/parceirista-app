@@ -5,10 +5,10 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 
 export default function LargeButton(props) {
   const innerContent = props.children ? props.children : <Text style={styles(props.type).textWrapper}>{props.text}</Text>
-  const type = props.professional != undefined ? 'professional' : 'business'
+  const isBusiness = props.professional != undefined;
   return (
-      <View style={styles(type).buttonView}>
-        <TouchableOpacity style={styles(type).buttonWrapper}>
+      <View style={styles(isBusiness).buttonView}>
+        <TouchableOpacity style={styles(isBusiness).buttonWrapper} onPress={props.onPress}>
           { innerContent }
         </TouchableOpacity>
       </View>
