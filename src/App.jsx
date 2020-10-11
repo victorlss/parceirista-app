@@ -21,7 +21,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Inicio" component={Home}/>
+        <Stack.Screen name="Inicio" component={Home} options={{headerShown: false}} />
         <Stack.Screen name="Seja um parceiro" component={ProfessionalSignUp}/>
       </Stack.Navigator>
     </NavigationContainer>

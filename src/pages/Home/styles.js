@@ -12,49 +12,45 @@ const styles = StyleSheet.create({
         paddingHorizontal: 35,
         justifyContent: 'flex-start'
     },
-    topLogo: {
-        width: 288,
+    logo: {
+        width: '100%',
         height: 74
     },
-    topDescription: {
+    message: {
         fontFamily: 'Raleway_400Regular',
         fontSize: 18,
         color: '#778CA3',
         paddingTop: 12,
         lineHeight: 21
     },
-    downContent: {
+    bottomView: {
         flex: 0.5,
         paddingHorizontal: 35,
         justifyContent: 'flex-end'
     },
-    downBottons: {
-        paddingBottom: 40
-    },
-    firstBottom: {
-        backgroundColor: '#C69CEF',
-        width: 297,
+    button: {
+        width: '100%',
         height: 80,
         flexDirection: 'row',
         alignItems: 'center',
         borderRadius: 8,
-        marginBottom: 39
+        marginBottom: 25
     },
-    secondBottom: {
-        backgroundColor: '#FFB67B',
-        width: 297,
-        height: 80,
-        flexDirection: 'row',
-        alignItems: 'center',
-        borderRadius: 8
+    buttonIcon: {
+        height: '100%',
+        width: 50,
+        paddingTop: 30,
+        paddingLeft: 15,
+        borderTopLeftRadius: 8,
+        borderBottomLeftRadius: 8
     },
-    downTextBottons: {
+    buttonText: {
         color: 'white',
         fontFamily: 'Raleway_700Bold',
         fontSize: 24,
         paddingLeft: 13
     },
-    downTextInfo: {
+    footerText: {
         fontFamily: 'Raleway_400Regular',
         fontSize: 13,
         color: '#778ca3'

@@ -1,35 +1,37 @@
 import React from 'react'
-import {View, Image, Text, TouchableOpacity} from 'react-native'
-import styles from './styles'
+import {View, Image, Text, TouchableOpacity, Button} from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome5'
+import styles from './styles'
 
 export default function Home(props) {
   return (
     <View style={styles.container}>
       <View style={styles.topView}>
-        <Image
-          source={{
-            uri:
-              'https://avatars1.githubusercontent.com/u/54149914?s=460&u=e6a4306816a79fdcf1f4927c265ede6adcfb5a33&v=4'
-          }}
-          style={styles.topLogo}
-        />
-        <Text style={styles.topDescription}>
-          Crescimento para os {'\n'}primeiros empreendimentos.
+        <Image source={require('../../assets/images/logo.svg')} style={styles.logo}/>
+        <Text style={styles.message}>
+          Crescimento para os primeiros empreendimentos.
         </Text>
       </View>
 
-      <View style={styles.downContent}>
-        <View style={styles.downBottons}>
-          <TouchableOpacity style={styles.firstBottom}>
-            <Text style={styles.downTextBottons}>Buscar um parceiro</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.secondBottom} onPress={() => props.navigation.navigate('Seja um parceiro')}>
-            <Text style={styles.downTextBottons}>Seja um parceiro</Text>
-          </TouchableOpacity>
-        </View>
-        <Text style={styles.downTextInfo}>
-          Total de 652 <Icon name="hands-helping" size={13} color="#a55eea"/>{' '}
+      <View style={styles.bottomView}>
+        <TouchableOpacity style={[styles.button, {backgroundColor: '#C69CEF'}]}>
+          <View style={[styles.buttonIcon, {backgroundColor: '#A55EEA'}]}>
+            <Icon name="search-dollar" size={20} color="#fff"/>
+          </View>
+          <div>
+            <Text style={styles.buttonText}>Buscar um parceiro</Text>
+          </div>
+        </TouchableOpacity>
+        <TouchableOpacity style={[styles.button, {backgroundColor: '#FFB67B'}]}
+                          onPress={() => props.navigation.navigate('Seja um parceiro')}>
+          <View style={[styles.buttonIcon, {backgroundColor: '#FD9644'}]}>
+            <Icon name="hands-helping" size={20} color="#fff"/>
+          </View>
+          <Text style={styles.buttonText}>Seja um parceiro</Text>
+        </TouchableOpacity>
+        <Text style={styles.footerText}>
+          Total de 652{' '}
+          <Icon name="hands-helping" size={13} color="#a55eea"/>{' '}
           parceiristas
         </Text>
       </View>
