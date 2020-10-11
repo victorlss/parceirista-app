@@ -12,11 +12,13 @@ const styles = StyleSheet.create({
     rigthCard: {
         backgroundColor: '#e6e6f0',
         paddingHorizontal: 10,
-        paddingVertical: 8
+        paddingVertical: 8,
+        width: '50%'
     },
     leftCard: {
         paddingHorizontal: 10,
-        paddingVertical: 8
+        paddingVertical: 8,
+        width: '50%'
     },
     text: {
         fontFamily: 'Raleway_400Regular',
@@ -36,6 +38,13 @@ const styles = StyleSheet.create({
         color: '#fd9644',
         fontSize: 15,
         marginBottom: 4
+    },
+    purpleText: {
+        fontFamily: 'Raleway_700Bold',
+        color: '#a55eea',
+        fontSize: 15,
+        paddingTop: 3,
+        paddingBottom: 4
     }
 })
 
