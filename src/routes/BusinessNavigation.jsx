@@ -5,7 +5,6 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import Home from '../pages/Business/Home'
 import Profile from '../pages/Business/Profile'
 import Services from '../pages/Business/Services'
-import Services2 from '../pages/Business/Services2'
 
 export default function ProfessionalNavigation() {
   const {Navigator, Screen} = createBottomTabNavigator()
@@ -20,16 +19,6 @@ export default function ProfessionalNavigation() {
         component={Home}
         options={{
           tabBarLabel: 'Home',
-          tabBarIcon: ({color}) => {
-            return <Icon name="home" size={18} color={color}/>
-          }
-        }}
-      />
-      <Screen
-        name="Services2"
-        component={Services2}
-        options={{
-          tabBarLabel: 'Services2',
           tabBarIcon: ({color}) => {
             return <Icon name="home" size={18} color={color}/>
           }
