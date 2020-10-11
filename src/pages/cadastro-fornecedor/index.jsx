@@ -1,12 +1,14 @@
 import React from 'react'
 import { View, Image, Text } from 'react-native'
-import { FlatList, ScrollView, TextInput } from 'react-native-gesture-handler'
+import { RectButton, ScrollView, TextInput } from 'react-native-gesture-handler'
+import CheckBox from '@react-native-community/checkbox'
 import CardScroll from '../../components/card-scroll'
 import styles from './styles'
+import SubmitButton from '../../components/SubmitButton'
 
 export default function CadastroFornecedor() {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={styles.topView}>
         <Image
           style={styles.topImageProfile}
@@ -21,7 +23,7 @@ export default function CadastroFornecedor() {
         <Text style={styles.welcomeText}>
           Bem vindo! {'\n'}
           <Text style={styles.welcomeTextStrong}>
-            Crie su conta gratuitamente!
+            Crie sua conta gratuitamente!
           </Text>
         </Text>
         <View style={styles.hrWelcomeDown}></View>
@@ -61,6 +63,30 @@ export default function CadastroFornecedor() {
           <CardScroll />
         </ScrollView>
       </View>
-    </View>
+      <View style={styles.acordoView}>
+        <Text style={styles.inputsTextLabel}>Tipo de acordo</Text>
+        <View style={styles.checkboxView}>
+          <View style={styles.checkboxElement}>
+            <CheckBox disabled={false} />
+            <Text>Pro porcentagem</Text>
+          </View>
+          <View style={styles.checkboxElement}>
+            <CheckBox disabled={false} />
+            <Text>Pro porcentagem</Text>
+          </View>
+        </View>
+      </View>
+      <View style={styles.descriptionView}>
+        <Text style={styles.inputsTextLabel}>Descrição</Text>
+        <TextInput
+          style={styles.textAreaInput}
+          multiline={true}
+          onChangeText={(text) => console.log(text)}
+        ></TextInput>
+      </View>
+      <View style={styles.buttonView}>
+        <SubmitButton />
+      </View>
+    </ScrollView>
   )
 }

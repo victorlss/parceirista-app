@@ -72,6 +72,39 @@ const styles = StyleSheet.create({
     serviceView: {
         paddingHorizontal: 18,
         marginTop: 15
+    },
+    acordoView: {
+        paddingHorizontal: 18,
+        marginTop: 20
+    },
+    checkboxView: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-evenly'
+    },
+    checkboxElement: {
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+    descriptionView: {
+        paddingHorizontal: 18,
+        marginTop: 20
+    },
+    textAreaInput: {
+        width: '100%',
+        minHeight: 100,
+        borderRadius: 4,
+        backgroundColor: '#fafafc',
+        borderStyle: 'solid',
+        borderWidth: 1,
+        borderColor: '#fd9644',
+        marginBottom: 8,
+        paddingLeft: 20
+    },
+    buttonView: {
+        paddingHorizontal: 18,
+        marginTop: 20,
+        alignItems: 'center'
     }
 })
 
