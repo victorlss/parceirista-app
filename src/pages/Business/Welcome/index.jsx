@@ -7,9 +7,11 @@ import styles from './styles'
 import logoSebrae from "../../../assets/images/logo-sebrae.png"
 
 export default function Welcome(props) {
+  const theme = 'business';
+
   return (
     <Fragment>
-      <WelcomeBar>
+      <WelcomeBar theme={theme}>
         <Text style={styles.welcomeTextBold}>Parcerista, Francisco.</Text>
       </WelcomeBar>
       <ScrollView style={styles.container}>
