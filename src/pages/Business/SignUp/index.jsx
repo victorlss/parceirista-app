@@ -56,7 +56,7 @@ export default function SignUp(props) {
       </View>
 
       <View style={styles.buttonView}>
-        <TouchableOpacity style={styles.button} onPress={() => props.navigation.navigate('BusinessNavigation')}>
+        <TouchableOpacity style={styles.button} onPress={() => props.navigation.navigate('BusinessTutorial')}>
           <Text style={styles.buttonText}>SER UM PARCEIRISTA</Text>
         </TouchableOpacity>
       </View>
