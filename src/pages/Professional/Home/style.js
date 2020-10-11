@@ -43,15 +43,37 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginTop: 15
     },
-    receberButton: {
-        borderRadius: 4,
+    parceirosButton: {
         backgroundColor: '#fafafc',
-        borderStyle: 'solid',
-        borderRightWidth: 19,
-        borderColor: '#fd9644',
+        textAlignVertical: "center",
+        textAlign: "center",
         width: '50%',
-        height: 50
-    }
+        height: 60,
+        marginBottom: 12
+    },
+    parceirosButtonView: {
+        borderRadius: 4,
+        borderWidth: 1,
+        borderColor: '#E6E6F0',
+        textAlignVertical: "center",
+        textAlign: "center",
+        width: '100%',
+        height: 60
+    },
+    parceirosButtonText: {
+        color: "#E6E6F0",
+        textAlignVertical: "center",
+        textAlign: "center",
+        marginTop: 18,
+        fontSize: 16,
+        fontWeight: "bold"
+    },
+    activeButtonView: {
+        borderColor:"#FD9644"
+    },
+    activeButtonText: {
+        color: "#FD9644"
+    },
 })
 
 export default styles

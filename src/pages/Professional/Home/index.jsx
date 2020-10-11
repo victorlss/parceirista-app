@@ -27,11 +27,15 @@ export default function Home() {
         </View>
       </View>
       <View style={styles.buttonsWrapper}>
-        <RectButton style={styles.receberButton}>
-          <Text>Receber parceiros</Text>
+        <RectButton style={styles.parceirosButton}>
+          <View style={[styles.parceirosButtonView, styles.activeButtonView]}>
+            <Text style={[styles.parceirosButtonText, , styles.activeButtonText]}>Receber trabalhos</Text>
+          </View>
         </RectButton>
-        <RectButton style={styles.receberButton}>
-          <Text>Receber parceiros</Text>
+        <RectButton style={styles.parceirosButton}>
+        <View style={styles.parceirosButtonView}>
+            <Text style={styles.parceirosButtonText}>Meus trabalhos</Text>
+          </View>
         </RectButton>
       </View>
       <ScrollView

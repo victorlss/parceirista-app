@@ -4,7 +4,7 @@ import { ScrollView, TextInput } from 'react-native-gesture-handler'
 // import CheckBox from '@react-native-community/checkbox'
 import CardScroll from '../../../components/CardScroll'
 import LineSeparator from '../../../components/LineSeparator'
-import styles from './styles'
+import styles from './style'
 
 export default function SignUp(props) {
   return (
