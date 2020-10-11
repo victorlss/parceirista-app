@@ -1,8 +1,10 @@
 import React from 'react'
 import Icon from 'react-native-vector-icons/FontAwesome5'
+import Icon2 from 'react-native-vector-icons/MaterialIcons'
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import Home from '../pages/Business/Home'
 import Profile from '../pages/Business/Profile'
+import Services from '../pages/Business/Services'
 
 export default function ProfessionalNavigation() {
   const {Navigator, Screen} = createBottomTabNavigator()
@@ -23,12 +25,22 @@ export default function ProfessionalNavigation() {
         }}
       />
       <Screen
-        name="Perfil"
+        name="Entrar"
         component={Profile}
         options={{
-          tabBarLabel: 'Perfil',
+          tabBarLabel: 'Entrar',
           tabBarIcon: ({color}) => {
             return <Icon name="user-circle" size={18} color={color}/>
+          }
+        }}
+      />
+      <Screen
+        name="Perfil"
+        component={Services}
+        options={{
+          tabBarLabel: 'Serviços',
+          tabBarIcon: ({color}) => {
+            return <Icon2 name="home-repair-service" size={18} color={color} />
           }
         }}
       />
