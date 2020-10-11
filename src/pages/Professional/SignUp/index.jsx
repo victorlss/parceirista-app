@@ -1,6 +1,5 @@
 import React from 'react'
-import { View, Image, Text, CheckBox, TouchableOpacity } from 'react-native'
-import { ScrollView, TextInput } from 'react-native-gesture-handler'
+import { View, Image, Text, CheckBox, TouchableOpacity, ScrollView, TextInput } from 'react-native'
 // import CheckBox from '@react-native-community/checkbox'
 import CardScroll from '../../../components/CardScroll'
 import LineSeparator from '../../../components/LineSeparator'

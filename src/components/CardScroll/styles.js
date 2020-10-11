@@ -18,6 +18,24 @@ const styles = StyleSheet.create({
     },
     iconWrapper: {
         paddingTop: 10
+    },
+    cardWrapperPurple: {
+        backgroundColor: '#e9d4fd',
+        width: 110,
+        height: 120,
+        marginRight: 10,
+        overflow: 'hidden',
+        alignItems: 'center'
+    },
+    textInfoPurple: {
+        color: '#a55eea',
+        fontFamily: 'Raleway_700Bold',
+        maxWidth: 70,
+        fontSize: 13,
+        paddingTop: 20
+    },
+    iconWrapperPurple: {
+        paddingTop: 10
     }
 })
 
