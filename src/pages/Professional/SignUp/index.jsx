@@ -5,44 +5,34 @@ import CardScroll from '../../../components/CardScroll'
 import LineSeparator from '../../../components/LineSeparator'
 import styles from './style'
 import Welcome from "../../../components/Welcome";
+import FullInput from '../../../components/FullInput'
+import LargeButton from '../../../components/LargeButton'
+import ProfileInfo from '../../../components/ProfileInfo'
 
 export default function SignUp(props) {
   return (
     <ScrollView style={styles.container}>
-      <View style={styles.topView}>
-        <Image
-          style={styles.topImageProfile}
-          source={{
-            uri:
-              'https://avatars1.githubusercontent.com/u/54149914?s=460&u=e6a4306816a79fdcf1f4927c265ede6adcfb5a33&v=4'
-          }}
-        />
-        <Text style={styles.topInfo}>Obrigado por ser {'\n'} um parceiro</Text>
-      </View>
+      <ProfileInfo url="https://avatars1.githubusercontent.com/u/54149914?s=460&u=e6a4306816a79fdcf1f4927c265ede6adcfb5a33&v=4" />
       <View style={styles.welcomeView}>
         <Welcome />
         <LineSeparator />
       </View>
       <View style={styles.inputsView}>
         <Text style={styles.inputsTextLabel}>Dados Pessoais</Text>
-        <TextInput
-          placeholder="Nome"
-          style={styles.textInput}
+        <FullInput 
+          name="Nome"
           onChangeText={(text) => console.log(text)}
         />
-        <TextInput
-          placeholder="CPF/CNPJ"
-          style={styles.textInput}
+        <FullInput 
+          name="CPF/CNPJ"
           onChangeText={(text) => console.log(text)}
         />
-        <TextInput
-          placeholder="Telefone"
-          style={styles.textInput}
+        <FullInput 
+          name="Telefone"
           onChangeText={(text) => console.log(text)}
         />
-        <TextInput
-          placeholder="Email"
-          style={styles.textInput}
+        <FullInput 
+          name="Email"
           onChangeText={(text) => console.log(text)}
         />
       </View>
@@ -79,11 +69,10 @@ export default function SignUp(props) {
           onChangeText={(text) => console.log(text)}
         />
       </View>
-      <View style={styles.buttonView}>
-        <TouchableOpacity style={styles.buttonWrapper} onPress={() => props.navigation.navigate('ProfessionalNavigation')}>
-          <Text style={styles.textWrapper}>SER UM PARCEIRO</Text>
-        </TouchableOpacity>
-      </View>
+      <LargeButton
+        onPress={() => props.navigation.navigate('ProfessionalNavigation')}
+        text="SER UM PARCEIRO"
+      />
     </ScrollView>
   )
 }
