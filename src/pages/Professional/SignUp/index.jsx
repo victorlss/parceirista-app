@@ -6,7 +6,7 @@ import CardScroll from '../../../components/CardScroll'
 import LineSeparator from '../../../components/LineSeparator'
 import styles from './styles'
 
-export default function ProfessionalSignUp(props) {
+export default function SignUp(props) {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.topView}>

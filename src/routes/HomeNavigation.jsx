@@ -6,6 +6,7 @@ import Home from "../pages/Home";
 import ProfessionalSignUp from "../pages/Professional/SignUp";
 import ProfessionalNavigation from "./ProfessionalNavigation";
 import BusinessSignUp from "../pages/Business/SignUp";
+import BusinessNavigation from "./BusinessNavigation";
 
 export default function HomeNavigation() {
   const { Navigator, Screen } = createStackNavigator()
@@ -14,7 +15,7 @@ export default function HomeNavigation() {
       <Navigator initialRouteName="Home">
         <Screen name="Home" component={Home} options={{headerShown: false, headerTitle: 'Inicio'}} />
         <Screen name="BusinessSignUp" component={BusinessSignUp} options={{headerTitle: 'Seja um parceirista'}}/>
-        {/*<Screen name="BusinessNavigation" component={ProfessionalNavigation} options={{headerShown: false}} />*/}
+        <Screen name="BusinessNavigation" component={BusinessNavigation} options={{headerShown: false}} />
         <Screen name="ProfessionalSignUp" component={ProfessionalSignUp} options={{headerTitle: 'Seja um parceiro'}}/>
         <Screen name="ProfessionalNavigation" component={ProfessionalNavigation} options={{headerShown: false}} />
       </Navigator>

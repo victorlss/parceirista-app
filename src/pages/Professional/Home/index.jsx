@@ -8,7 +8,7 @@ import Stars from '../../../components/Stars'
 import { RectButton, ScrollView } from 'react-native-gesture-handler'
 import DemandCard from '../../../components/DemandCard'
 
-export default function TabHomeNavigation() {
+export default function Home() {
   return (
     <View style={styles.containerWrapper}>
       <View style={styles.profileWrapper}>

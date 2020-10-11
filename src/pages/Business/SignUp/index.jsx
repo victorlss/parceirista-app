@@ -3,7 +3,7 @@ import { View, Text } from 'react-native'
 import { RectButton, ScrollView } from 'react-native-gesture-handler'
 import styles from './styles'
 
-export default function BusinessSignUp(props) {
+export default function SignUp(props) {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.buttonView}>
