@@ -3,9 +3,8 @@ import { StyleSheet } from 'react-native'
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#f8f9fa'
+        backgroundColor: '#f8f9fa',
     },
-
     headerView: {
         justifyContent: 'flex-start',
         marginTop: 15,
@@ -25,12 +24,11 @@ const styles = StyleSheet.create({
         width: 60,
         height: 60
     },
-
-    inputsView: {
+    formView: {
         marginTop: 16,
         paddingHorizontal: 19
     },
-    inputsTextLabel: {
+    label: {
         color: '#778ca3',
         fontFamily: 'Raleway_700Bold',
         fontSize: 14,
@@ -44,39 +42,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#fafafc',
         borderStyle: 'solid',
         borderWidth: 1,
-        borderColor: '#fd9644',
-        marginBottom: 8,
-        paddingLeft: 20
-    },
-    serviceView: {
-        paddingHorizontal: 18,
-        marginTop: 15
-    },
-    acordoView: {
-        paddingHorizontal: 18,
-        marginTop: 20
-    },
-    checkboxView: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-evenly'
-    },
-    checkboxElement: {
-        flexDirection: 'row',
-        alignItems: 'center'
-    },
-    descriptionView: {
-        paddingHorizontal: 18,
-        marginTop: 20
-    },
-    textAreaInput: {
-        width: '100%',
-        minHeight: 100,
-        borderRadius: 4,
-        backgroundColor: '#fafafc',
-        borderStyle: 'solid',
-        borderWidth: 1,
-        borderColor: '#fd9644',
+        borderColor: '#A55EEA',
         marginBottom: 8,
         paddingLeft: 20
     },
@@ -86,16 +52,17 @@ const styles = StyleSheet.create({
         marginBottom: 15,
         alignItems: 'center'
     },
-    buttonWrapper: {
-        width: 320,
+    button: {
+        width: '100%',
         height: 55,
-        backgroundColor: '#ffe2cb',
+        backgroundColor: '#E9D4FD',
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: 4
+        borderRadius: 4,
+        marginBottom: 30
     },
-    textWrapper: {
-        color: '#fd9644',
+    buttonText: {
+        color: '#A55EEA',
         fontFamily: 'Raleway_700Bold',
         fontSize: 18
     }
