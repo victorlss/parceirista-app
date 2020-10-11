@@ -6,7 +6,7 @@ import Home from '../pages/Home';
 import ProfessionalSignUp from '../pages/Professional/SignUp'
 import ProfessionalNavigation from './ProfessionalNavigation'
 import BusinessSignUp from "../pages/Business/SignUp"
-import BusinessTutorial from '../pages/Business/Tutorial'
+import BusinessWelcome from '../pages/Business/Welcome'
 import BusinessNavigation from "./BusinessNavigation"
 
 export default function HomeNavigation() {
@@ -18,7 +18,7 @@ export default function HomeNavigation() {
         <Screen name="ProfessionalNavigation" component={ProfessionalNavigation} options={{headerShown: false}} />
         <Screen name="Home" component={Home} options={{headerShown: false, headerTitle: 'Inicio'}} />
         <Screen name="BusinessSignUp" component={BusinessSignUp} options={{headerTitle: 'Seja um parceirista'}}/>
-        <Screen name="BusinessTutorial" component={BusinessTutorial} options={{headerShown: false}} />
+        <Screen name="BusinessTutorial" component={BusinessWelcome} options={{headerShown: false}} />
         <Screen name="ProfessionalSignUp" component={ProfessionalSignUp} options={{headerTitle: 'Seja um parceiro'}}/>
       </Navigator>
     </NavigationContainer>

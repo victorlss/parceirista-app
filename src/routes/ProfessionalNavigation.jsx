@@ -11,27 +11,6 @@ export default function ProfessionalNavigation() {
     <Navigator
       tabBarOptions={{
         activeTintColor: '#fd9644'
-        // style: {
-        //   elevation: 20,
-        //   shadowOpacity: 0,
-        //   height: 50
-        // },
-        // tabStyle: {
-        //   alignItems: 'center',
-        //   justifyContent: 'center'
-        // },
-        // iconStyle: {
-        //   flex: 0,
-        //   width: 15,
-        //   height: 15
-        // },
-        // labelStyle: {
-        //   fontSize: 12,
-        //   marginTop: 3
-        // },
-        // inactiveBackgroundColor: '#e6e6f0',
-        // activeBackgroundColor: '#e6e6f0',
-        // inactiveTintColor: '#778ca3',
       }}
     >
       <Screen

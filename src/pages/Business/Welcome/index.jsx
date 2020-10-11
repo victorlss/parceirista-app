@@ -6,7 +6,7 @@ import WelcomeBar from "../../../components/WelcomeBar"
 import styles from './styles'
 import logoSebrae from "../../../assets/images/logo-sebrae.png"
 
-export default function Tutorial(props) {
+export default function Welcome(props) {
   return (
     <Fragment>
       <WelcomeBar>
@@ -16,11 +16,15 @@ export default function Tutorial(props) {
         <Text style={styles.text}>
           Como garantir a qualidade dos serviços prestados e ter crescimento para o seu empreendimento?
         </Text>
-        <YoutubePlayer
-          height='100%'
-          play={false}
-          videoId={"ECZgh2ShdAo"}
-        />
+
+        <View>
+          <YoutubePlayer
+            height='100%'
+            play={false}
+            videoId={"ECZgh2ShdAo"}
+          />
+        </View>
+
         <Text style={styles.text}>
           Para mais conteúdo para o seu empreendimento acesse Sebrae
         </Text>
