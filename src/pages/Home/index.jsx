@@ -2,15 +2,13 @@ import React from 'react'
 import {View, Image, Text, TouchableOpacity} from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome5'
 import styles from './styles'
+import logo from '../../assets/images/logo.png'
 
 export default function Home(props) {
   return (
     <View style={styles.container}>
       <View style={styles.topView}>
-        <Image source={require('../../assets/images/logo.png')} style={styles.logo}/>
-        <Text style={styles.message}>
-          Crescimento para os primeiros empreendimentos.
-        </Text>
+        <Image source={logo} resizeMode="contain" style={styles.logo}/>
       </View>
 
       <View style={styles.bottomView}>
