@@ -1,12 +1,15 @@
-import React from 'react'
-import { View, Text } from 'react-native'
-import styles from './style'
-import Stars from '../../../components/Stars'
-import { RectButton, ScrollView } from 'react-native-gesture-handler'
-import DemandCard from '../../../components/DemandCard'
-import ProfileHeader from '../../../components/ProfileHeader'
+import React, { useState } from "react";
+import { View, Text } from "react-native";
+import styles from "./style";
+import Stars from "../../../components/Stars";
+import { RectButton, ScrollView } from "react-native-gesture-handler";
+import DemandCard from "../../../components/DemandCard";
+import ProfileHeader from "../../../components/ProfileHeader";
+import MediumButton from "../../../components/MediumButton";
 
 export default function Home() {
+  const [isMeuTrabalho, setIsMeuTrabalho] = useState(false);
+
   return (
     <View style={styles.containerWrapper}>
       <ProfileHeader
@@ -25,20 +28,16 @@ export default function Home() {
         </View>
       </View>
       <View style={styles.buttonsWrapper}>
-        <RectButton style={styles.parceirosButton}>
-          <View style={[styles.parceirosButtonView, styles.activeButtonView]}>
-            <Text
-              style={[styles.parceirosButtonText, , styles.activeButtonText]}
-            >
-              Receber trabalhos
-            </Text>
-          </View>
-        </RectButton>
-        <RectButton style={styles.parceirosButton}>
-          <View style={styles.parceirosButtonView}>
-            <Text style={styles.parceirosButtonText}>Meus trabalhos</Text>
-          </View>
-        </RectButton>
+        <MediumButton
+          text="Receber Trabalhos"
+          isActive={isMeuTrabalho}
+          onPress={() => setIsMeuTrabalho(true)}
+        />
+        <MediumButton
+          text="Meus Trabalhos"
+          isActive={!isMeuTrabalho}
+          onPress={() => setIsMeuTrabalho(false)}
+        />
       </View>
       <ScrollView
         contentContainerStyle={{

@@ -2,14 +2,26 @@ import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: '#f8f9fa',
+    paddingHorizontal: 18,
+    height: '100%'
+  },
+  text: {
+    fontFamily: 'Raleway_400Regular',
+    color: '#778CA3',
+    fontSize: 18,
+    lineHeight: 21,
+    marginTop: 10,
+    marginBottom: 10
+  },
+  linkView: {
+    marginTop: 20
   },
   buttonView: {
+    backgroundColor: '#f8f9fa',
     paddingHorizontal: 18,
-    marginTop: 20,
-    marginBottom: 15,
-    alignItems: 'center'
+    flex: 1,
+    justifyContent: 'flex-end',
   },
   button: {
     width: '100%',
