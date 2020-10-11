@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     },
     topView: {
         justifyContent: 'flex-start',
-        marginTop: 60,
+        marginTop: 15,
         flexDirection: 'row',
         alignItems: 'center',
         paddingHorizontal: 18

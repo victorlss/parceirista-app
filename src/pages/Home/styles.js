@@ -10,7 +10,6 @@ const styles = StyleSheet.create({
     topView: {
         flex: 0.4,
         paddingHorizontal: 35,
-        paddingTop: 60,
         justifyContent: 'flex-start'
     },
     topLogo: {

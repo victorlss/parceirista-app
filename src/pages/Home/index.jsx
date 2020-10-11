@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Image, Text, TouchableOpacity } from 'react-native'
+import {View, Image, Text, TouchableOpacity} from 'react-native'
 import styles from './styles'
 import Icon from 'react-native-vector-icons/FontAwesome5'
 
@@ -29,7 +29,7 @@ export default function Home(props) {
           </TouchableOpacity>
         </View>
         <Text style={styles.downTextInfo}>
-          Total de 652 <Icon name="hands-helping" size={13} color="#a55eea" />{' '}
+          Total de 652 <Icon name="hands-helping" size={13} color="#a55eea"/>{' '}
           parceiristas
         </Text>
       </View>

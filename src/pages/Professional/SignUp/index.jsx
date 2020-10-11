@@ -1,6 +1,6 @@
 import React from 'react'
-import { View, Image, Text, CheckBox } from 'react-native'
-import { RectButton, ScrollView, TextInput } from 'react-native-gesture-handler'
+import {View, Image, Text, CheckBox} from 'react-native'
+import {RectButton, ScrollView, TextInput} from 'react-native-gesture-handler'
 //import CheckBox from '@react-native-community/checkbox'
 import CardScroll from '../../../components/CardScroll'
 import styles from './styles'
@@ -26,7 +26,7 @@ export default function ProfessionalSignUp() {
             Crie sua conta gratuitamente!
           </Text>
         </Text>
-        <View style={styles.hrWelcomeDown}></View>
+        <View style={styles.hrWelcomeDown}/>
       </View>
       <View style={styles.inputsView}>
         <Text style={styles.inputsTextLabel}>Dados Pessoais</Text>
@@ -34,44 +34,44 @@ export default function ProfessionalSignUp() {
           placeholder="Nome"
           style={styles.textInput}
           onChangeText={(text) => console.log(text)}
-        ></TextInput>
+        />
         <TextInput
           placeholder="CPF/CNPJ"
           style={styles.textInput}
           onChangeText={(text) => console.log(text)}
-        ></TextInput>
+        />
         <TextInput
           placeholder="Telefone"
           style={styles.textInput}
           onChangeText={(text) => console.log(text)}
-        ></TextInput>
+        />
         <TextInput
           placeholder="Email"
           style={styles.textInput}
           onChangeText={(text) => console.log(text)}
-        ></TextInput>
+        />
       </View>
       <View style={styles.serviceView}>
         <Text style={styles.inputsTextLabel}>Serviços</Text>
         <ScrollView horizontal={true}>
-          <CardScroll />
-          <CardScroll />
-          <CardScroll />
-          <CardScroll />
-          <CardScroll />
-          <CardScroll />
-          <CardScroll />
+          <CardScroll/>
+          <CardScroll/>
+          <CardScroll/>
+          <CardScroll/>
+          <CardScroll/>
+          <CardScroll/>
+          <CardScroll/>
         </ScrollView>
       </View>
       <View style={styles.acordoView}>
         <Text style={styles.inputsTextLabel}>Tipo de acordo</Text>
         <View style={styles.checkboxView}>
           <View style={styles.checkboxElement}>
-            <CheckBox disabled={false} />
+            <CheckBox disabled={false}/>
             <Text>Pro porcentagem</Text>
           </View>
           <View style={styles.checkboxElement}>
-            <CheckBox disabled={false} />
+            <CheckBox disabled={false}/>
             <Text>Pro porcentagem</Text>
           </View>
         </View>
@@ -82,10 +82,10 @@ export default function ProfessionalSignUp() {
           style={styles.textAreaInput}
           multiline={true}
           onChangeText={(text) => console.log(text)}
-        ></TextInput>
+        />
       </View>
       <View style={styles.buttonView}>
-        <SubmitButton />
+        <SubmitButton/>
       </View>
     </ScrollView>
   )
