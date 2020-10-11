@@ -1,20 +1,12 @@
-/* import React from 'react'
-<<<<<<< HEAD:src/pages/Professional/SignUp/index.jsx
-import {View, Image, Text, CheckBox} from 'react-native'
-import {RectButton, ScrollView, TextInput} from 'react-native-gesture-handler'
-//import CheckBox from '@react-native-community/checkbox'
-import CardScroll from '../../../components/CardScroll'
-import styles from './styles'
-import SubmitButton from '../../../components/SubmitButton' */
-
+import React from 'react'
 import { View, Image, Text, CheckBox } from 'react-native'
 import { RectButton, ScrollView, TextInput } from 'react-native-gesture-handler'
-import CardScroll from '../../components/CardScroll'
+// import CheckBox from '@react-native-community/checkbox'
+import CardScroll from '../../../components/CardScroll'
+import LineSeparator from '../../../components/LineSeparator'
 import styles from './styles'
-import SubmitButton from '../../components/SubmitButton'
-import LineSeparator from '../../components/LineSeparator'
 
-export default function ProfessionalSignUp() {
+export default function ProfessionalSignUp(props) {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.topView}>
@@ -94,7 +86,9 @@ export default function ProfessionalSignUp() {
         />
       </View>
       <View style={styles.buttonView}>
-        <SubmitButton/>
+        <RectButton style={styles.buttonWrapper} onPress={() => props.navigation.navigate('ProfessionalNavigation')}>
+          <Text style={styles.textWrapper}>SER UM PARCEIRO</Text>
+        </RectButton>
       </View>
     </ScrollView>
   )

@@ -100,6 +100,19 @@ const styles = StyleSheet.create({
         marginTop: 20,
         marginBottom: 15,
         alignItems: 'center'
+    },
+    buttonWrapper: {
+        width: 320,
+        height: 55,
+        backgroundColor: '#ffe2cb',
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 4
+    },
+    textWrapper: {
+        color: '#fd9644',
+        fontFamily: 'Raleway_700Bold',
+        fontSize: 18
     }
 })
 

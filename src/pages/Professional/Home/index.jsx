@@ -1,12 +1,12 @@
 import React from 'react'
 import { View, Text } from 'react-native'
-import ProfileInfo from '../../components/ProfileInfo'
-import ProfileSignName from '../../components/ProfileSignName'
+import ProfileInfo from '../../../components/ProfileInfo'
+import ProfileSignName from '../../../components/ProfileSignName'
 import styles from './style'
-import LineSeparator from '../../components/LineSeparator'
-import Stars from '../../components/Stars'
+import LineSeparator from '../../../components/LineSeparator'
+import Stars from '../../../components/Stars'
 import { RectButton, ScrollView } from 'react-native-gesture-handler'
-import DemandCard from '../../components/DemandCard'
+import DemandCard from '../../../components/DemandCard'
 
 export default function TabHomeNavigation() {
   return (
