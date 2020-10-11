@@ -13,7 +13,7 @@ export default function HomeNavigation() {
   const { Navigator, Screen } = createStackNavigator()
   return (
     <NavigationContainer>
-      <Navigator initialRouteName="BusinessNavigation">
+      <Navigator initialRouteName="Home">
         <Screen name="Home" component={Home} options={{headerShown: false, headerTitle: 'Inicio'}} />
         <Screen name="BusinessNavigation" component={BusinessNavigation} options={{headerShown: false}} />
         <Screen name="BusinessSignUp" component={BusinessSignUp} options={{headerTitle: 'Seja um parceirista'}}/>
