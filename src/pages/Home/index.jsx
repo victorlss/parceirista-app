@@ -3,7 +3,7 @@ import { View, Image, Text, TouchableOpacity } from 'react-native'
 import styles from './styles'
 import Icon from 'react-native-vector-icons/FontAwesome5'
 
-export default function Home() {
+export default function Home(props) {
   return (
     <View style={styles.container}>
       <View style={styles.topView}>
@@ -24,7 +24,7 @@ export default function Home() {
           <TouchableOpacity style={styles.firstBottom}>
             <Text style={styles.downTextBottons}>Buscar um parceiro</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.secondBottom}>
+          <TouchableOpacity style={styles.secondBottom} onPress={() => props.navigation.navigate('Seja um parceiro')}>
             <Text style={styles.downTextBottons}>Seja um parceiro</Text>
           </TouchableOpacity>
         </View>
