@@ -1,5 +1,5 @@
 import React from 'react'
-import {View, Image, Text, TouchableOpacity, Button} from 'react-native'
+import {View, Image, Text, TouchableOpacity} from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome5'
 import styles from './styles'
 
@@ -20,7 +20,7 @@ export default function Home(props) {
           </View>
           <Text style={styles.buttonText}>Buscar um parceiro</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.button, {backgroundColor: '#FFB67B'}]}
+        <TouchableOpacity style={[styles.button, {backgroundColor: '#ffb67b'}]}
                           onPress={() => props.navigation.navigate('Seja um parceiro')}>
           <View style={[styles.buttonIcon, {backgroundColor: '#FD9644'}]}>
             <Icon name="hands-helping" size={20} color="#fff"/>
