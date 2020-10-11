@@ -34,7 +34,6 @@ const styles = StyleSheet.create({
     },
     firstBottom: {
         backgroundColor: '#C69CEF',
-        borderRadius: 4,
         width: 297,
         height: 80,
         flexDirection: 'row',
@@ -44,7 +43,6 @@ const styles = StyleSheet.create({
     },
     secondBottom: {
         backgroundColor: '#FFB67B',
-        borderRadius: 4,
         width: 297,
         height: 80,
         flexDirection: 'row',
