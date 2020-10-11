@@ -8,7 +8,7 @@ import Home from "./pages/Home";
 import ProfessionalSignUp from "./pages/Professional/SignUp";
 
 export default function App() {
-  let [fontsLoaded] = useFonts({
+  const fontsLoaded = useFonts({
     Raleway_400Regular,
     Raleway_700Bold
   })
