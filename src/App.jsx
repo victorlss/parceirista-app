@@ -5,7 +5,7 @@ import createStackNavigator from "@react-navigation/stack/src/navigators/createS
 import {useFonts, Raleway_400Regular, Raleway_700Bold} from '@expo-google-fonts/raleway'
 import {AppLoading} from 'expo'
 import Home from "./pages/Home";
-import CadastroFornecedor from "./pages/CadastroFornecedor";
+import ProfessionalSignUp from "./pages/Professional/SignUp";
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -22,7 +22,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Inicio" component={Home}/>
-        <Stack.Screen name="Seja um parceiro" component={CadastroFornecedor}/>
+        <Stack.Screen name="Seja um parceiro" component={ProfessionalSignUp}/>
       </Stack.Navigator>
     </NavigationContainer>
   )
