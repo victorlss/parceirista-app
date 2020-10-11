@@ -5,6 +5,7 @@ import styles from './styles'
 import logo from '../../assets/images/logo.png'
 
 export default function Home(props) {
+
   return (
     <View style={styles.container}>
       <View style={styles.topView}>

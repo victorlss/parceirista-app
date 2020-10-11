@@ -74,9 +74,9 @@ export default function Home(props) {
       </View>
 
       <LargeButton
-        onPress={() => props.navigation.navigate('ProfessionalNavigation')}
+        onPress={() => props.navigation.navigate("ProfessionalNavigation")}
         business
         text="ATUALIZAR DADOS"/>
     </View>
-  )
+  );
 }
