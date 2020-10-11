@@ -1,20 +1,15 @@
 import React from 'react'
 import { View, Text, ScrollView } from 'react-native'
-import ProfileInfo from '../../../components/ProfileInfo'
-import ProfileSignName from '../../../components/ProfileSignName'
 import styles from './style'
 import LineSeparator from '../../../components/LineSeparator'
 import DemandCard from '../../../components/DemandCard'
 import CardScroll from '../../../components/CardScroll'
+import ProfileHeaderSignUp from '../../../components/ProfileHeaderSignUp'
 
 export default function Home() {
   return (
     <View style={styles.containerWrapper}>
-      <View style={styles.profileWrapper}>
-        <ProfileInfo />
-        <ProfileSignName />
-      </View>
-      <LineSeparator />
+      <ProfileHeaderSignUp description='Crescimento para o seu negócio'/>
       <View style={styles.serviceView}>
         <Text style={styles.inputsTextLabel}>Serviços</Text>
         <Text style={styles.inputsTextDescription}>
@@ -35,19 +30,19 @@ export default function Home() {
       <ScrollView
         contentContainerStyle={{
           paddingBottom: 16,
-          paddingTop: 2
+          paddingTop: 5
         }}
       >
-        <DemandCard purple/>
-        <DemandCard purple/>
-        <DemandCard purple/>
-        <DemandCard purple/>
-        <DemandCard purple/>
-        <DemandCard purple/>
-        <DemandCard purple/>
-        <DemandCard purple/>
-        <DemandCard purple/>
-        <DemandCard purple/>
+        <DemandCard purple />
+        <DemandCard purple />
+        <DemandCard purple />
+        <DemandCard purple />
+        <DemandCard purple />
+        <DemandCard purple />
+        <DemandCard purple />
+        <DemandCard purple />
+        <DemandCard purple />
+        <DemandCard purple />
       </ScrollView>
     </View>
   )

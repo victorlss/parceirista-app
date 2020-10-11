@@ -13,13 +13,13 @@ export default function HomeNavigation() {
   const { Navigator, Screen } = createStackNavigator()
   return (
     <NavigationContainer>
-      <Navigator initialRouteName="Home">
-        <Screen name="Home" component={Home} options={{headerShown: false, headerTitle: 'Inicio'}} />
+      <Navigator initialRouteName="BusinessNavigation">
         <Screen name="BusinessNavigation" component={BusinessNavigation} options={{headerShown: false}} />
+        <Screen name="ProfessionalNavigation" component={ProfessionalNavigation} options={{headerShown: false}} />
+        <Screen name="Home" component={Home} options={{headerShown: false, headerTitle: 'Inicio'}} />
         <Screen name="BusinessSignUp" component={BusinessSignUp} options={{headerTitle: 'Seja um parceirista'}}/>
         <Screen name="BusinessTutorial" component={BusinessTutorial} options={{headerShown: false}} />
         <Screen name="ProfessionalSignUp" component={ProfessionalSignUp} options={{headerTitle: 'Seja um parceiro'}}/>
-        <Screen name="ProfessionalNavigation" component={ProfessionalNavigation} options={{headerShown: false}} />
       </Navigator>
     </NavigationContainer>
   )

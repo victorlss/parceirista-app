@@ -9,10 +9,11 @@ import ProfileHeader from '../../../components/ProfileHeader'
 export default function Home() {
   return (
     <View style={styles.containerWrapper}>
-      <ProfileHeader 
+      <ProfileHeader
         name="Priscila Tavares"
         url="https://avatars1.githubusercontent.com/u/54149914?s=460&u=e6a4306816a79fdcf1f4927c265ede6adcfb5a33&v=4"
-        />
+        description={`Obrigado por ser um parceiro`}
+      />
       <View style={styles.saldoContainerWrapper}>
         <Text style={styles.saldoTextLigth}>
           Saldo Total{'\n'}
@@ -26,11 +27,15 @@ export default function Home() {
       <View style={styles.buttonsWrapper}>
         <RectButton style={styles.parceirosButton}>
           <View style={[styles.parceirosButtonView, styles.activeButtonView]}>
-            <Text style={[styles.parceirosButtonText, , styles.activeButtonText]}>Receber trabalhos</Text>
+            <Text
+              style={[styles.parceirosButtonText, , styles.activeButtonText]}
+            >
+              Receber trabalhos
+            </Text>
           </View>
         </RectButton>
         <RectButton style={styles.parceirosButton}>
-        <View style={styles.parceirosButtonView}>
+          <View style={styles.parceirosButtonView}>
             <Text style={styles.parceirosButtonText}>Meus trabalhos</Text>
           </View>
         </RectButton>
