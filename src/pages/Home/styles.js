@@ -1,4 +1,3 @@
-import { Raleway_700Bold } from '@expo-google-fonts/raleway'
 import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({

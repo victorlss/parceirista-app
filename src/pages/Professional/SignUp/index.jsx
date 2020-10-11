@@ -1,10 +1,18 @@
-import React from 'react'
+/* import React from 'react'
+<<<<<<< HEAD:src/pages/Professional/SignUp/index.jsx
 import {View, Image, Text, CheckBox} from 'react-native'
 import {RectButton, ScrollView, TextInput} from 'react-native-gesture-handler'
 //import CheckBox from '@react-native-community/checkbox'
 import CardScroll from '../../../components/CardScroll'
 import styles from './styles'
-import SubmitButton from '../../../components/SubmitButton'
+import SubmitButton from '../../../components/SubmitButton' */
+
+import { View, Image, Text, CheckBox } from 'react-native'
+import { RectButton, ScrollView, TextInput } from 'react-native-gesture-handler'
+import CardScroll from '../../components/CardScroll'
+import styles from './styles'
+import SubmitButton from '../../components/SubmitButton'
+import LineSeparator from '../../components/LineSeparator'
 
 export default function ProfessionalSignUp() {
   return (
@@ -27,6 +35,7 @@ export default function ProfessionalSignUp() {
           </Text>
         </Text>
         <View style={styles.hrWelcomeDown}/>
+        <LineSeparator />
       </View>
       <View style={styles.inputsView}>
         <Text style={styles.inputsTextLabel}>Dados Pessoais</Text>

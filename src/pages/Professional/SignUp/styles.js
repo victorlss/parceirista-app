@@ -41,12 +41,6 @@ const styles = StyleSheet.create({
         fontSize: 18,
         lineHeight: 21
     },
-    hrWelcomeDown: {
-        width: 320,
-        borderStyle: 'solid',
-        borderWidth: 1,
-        borderColor: '#e6e6f0'
-    },
     inputsView: {
         marginTop: 16,
         paddingHorizontal: 19
@@ -104,6 +98,7 @@ const styles = StyleSheet.create({
     buttonView: {
         paddingHorizontal: 18,
         marginTop: 20,
+        marginBottom: 15,
         alignItems: 'center'
     }
 })
