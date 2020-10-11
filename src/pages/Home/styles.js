@@ -8,6 +8,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     topView: {
+        marginTop: 10,
         flex: 0.4,
         paddingHorizontal: 35,
         justifyContent: 'flex-start'
