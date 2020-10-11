@@ -5,6 +5,7 @@ import { ScrollView, TextInput } from 'react-native-gesture-handler'
 import CardScroll from '../../../components/CardScroll'
 import LineSeparator from '../../../components/LineSeparator'
 import styles from './styles'
+import Welcome from "../../../components/Welcome";
 
 export default function SignUp(props) {
   return (
@@ -20,13 +21,7 @@ export default function SignUp(props) {
         <Text style={styles.topInfo}>Obrigado por ser {'\n'} um parceiro</Text>
       </View>
       <View style={styles.welcomeView}>
-        <Text style={styles.welcomeText}>
-          Bem vindo! {'\n'}
-          <Text style={styles.welcomeTextStrong}>
-            Crie sua conta gratuitamente!
-          </Text>
-        </Text>
-        <View style={styles.hrWelcomeDown}/>
+        <Welcome />
         <LineSeparator />
       </View>
       <View style={styles.inputsView}>
