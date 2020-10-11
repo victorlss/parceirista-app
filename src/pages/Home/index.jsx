@@ -4,6 +4,7 @@ import Icon from 'react-native-vector-icons/FontAwesome5'
 import styles from './styles'
 
 export default function Home(props) {
+
   return (
     <View style={styles.container}>
       <View style={styles.topView}>

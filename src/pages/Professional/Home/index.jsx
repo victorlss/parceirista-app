@@ -6,9 +6,12 @@ import { RectButton, ScrollView } from "react-native-gesture-handler";
 import DemandCard from "../../../components/DemandCard";
 import ProfileHeader from "../../../components/ProfileHeader";
 import MediumButton from "../../../components/MediumButton";
+import contractApi from "../../../api/contractApi";
 
 export default function Home() {
   const [isMeuTrabalho, setIsMeuTrabalho] = useState(false);
+  const [demands, setDemand] = useState([]);
+  contractApi.getAll("5f81fb67350dfd2270283a68").then((res) => setDemand(res));
 
   return (
     <View style={styles.containerWrapper}>
@@ -27,25 +30,25 @@ export default function Home() {
         </View>
       </View>
       <View style={styles.buttonsWrapper}>
-        <MediumButton text="Receber Trabalhos" isActive={isMeuTrabalho} onPress={() => setIsMeuTrabalho(true)} />
-        <MediumButton text="Meus Trabalhos" isActive={!isMeuTrabalho} onPress={() => setIsMeuTrabalho(false)} />
+        <MediumButton
+          text="Receber Trabalhos"
+          isActive={isMeuTrabalho}
+          onPress={() => setIsMeuTrabalho(true)}
+        />
+        <MediumButton
+          text="Meus Trabalhos"
+          isActive={!isMeuTrabalho}
+          onPress={() => setIsMeuTrabalho(false)}
+        />
       </View>
       <ScrollView
         contentContainerStyle={{
           paddingBottom: 16,
         }}
       >
-        <DemandCard />
-        <DemandCard />
-        <DemandCard />
-        <DemandCard />
-        <DemandCard />
-        <DemandCard />
-        <DemandCard />
-        <DemandCard />
-        <DemandCard />
-        <DemandCard />
-        <DemandCard />
+        {demands.map((demand) => (
+          <DemandCard key={demand._id} />
+        ))}
       </ScrollView>
     </View>
   );
