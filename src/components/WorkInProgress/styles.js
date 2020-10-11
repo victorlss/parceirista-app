@@ -24,6 +24,12 @@ const styles = (theme) => StyleSheet.create({
       flexDirection: 'column',
       justifyContent: 'space-between',
     },
+    progressDetail: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      marginTop: 10,
+      marginBottom: 10
+    },
     text: {
       fontFamily: 'Raleway_400Regular',
       fontSize: 14,
