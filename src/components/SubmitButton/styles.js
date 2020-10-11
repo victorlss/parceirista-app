@@ -13,7 +13,6 @@ const styles = StyleSheet.create({
         color: '#fd9644',
         fontFamily: 'Raleway_700Bold',
         fontSize: 18
-
     }
 })
 

@@ -5,6 +5,7 @@ import CheckBox from '@react-native-community/checkbox'
 import CardScroll from '../../components/CardScroll'
 import styles from './styles'
 import SubmitButton from '../../components/SubmitButton'
+import LineSeparator from '../../components/LineSeparator'
 
 export default function CadastroFornecedor() {
   return (
@@ -26,7 +27,7 @@ export default function CadastroFornecedor() {
             Crie sua conta gratuitamente!
           </Text>
         </Text>
-        <View style={styles.hrWelcomeDown}></View>
+        <LineSeparator />
       </View>
       <View style={styles.inputsView}>
         <Text style={styles.inputsTextLabel}>Dados Pessoais</Text>
