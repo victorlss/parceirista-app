@@ -1,13 +1,14 @@
-import React, { useState } from "react";
-import { View, Text } from "react-native";
-import styles from "./style";
-import LargeButton from "../../../components/LargeButton";
-import ProfileHeader from "../../../components/ProfileHeader";
-import FullInput from "../../../components/FullInput";
-import MediumButton from "../../../components/MediumButton";
+import React, {Fragment, useState} from 'react'
+import {View, Text} from 'react-native'
+import styles from './style'
+import LargeButton from '../../../components/LargeButton'
+import ProfileHeader from '../../../components/ProfileHeader'
+import FullInput from '../../../components/FullInput'
+import MediumButton from '../../../components/MediumButton'
 
 export default function Home(props) {
-  const [isDadosPessoais, setIsDadosPessoais] = useState(false);
+  const [activeTab, setActiveTab] = useState(1);
+
   return (
     <View style={styles.containerWrapper}>
       <ProfileHeader
@@ -16,20 +17,13 @@ export default function Home(props) {
       />
 
       <View style={styles.buttonsWrapper}>
-        <MediumButton
-          text="Dados Pessoais"
-          isActive={isDadosPessoais}
-          onPress={() => setIsDadosPessoais(true)}
-        />
-        <MediumButton
-          text="Dados Bancarios"
-          isActive={!isDadosPessoais}
-          onPress={() => setIsDadosPessoais(false)}
-        />
+        <MediumButton text="Dados Pessoais" isActive={activeTab === 1} onPress={() => setActiveTab(1)}/>
+        <MediumButton text="Dados Bancarios" isActive={activeTab === 2} onPress={() => setActiveTab(2)}/>
       </View>
+
       <View style={styles.inputsView}>
-        {isDadosPessoais ? (
-          <View>
+        {activeTab === 1 ? (
+          <Fragment>
             <Text style={styles.inputsTextLabel}>Dados Pessoais</Text>
             <FullInput
               professional
@@ -51,9 +45,9 @@ export default function Home(props) {
               name="Email"
               onChangeText={(text) => console.log(text)}
             />
-          </View>
+          </Fragment>
         ) : (
-          <View>
+          <Fragment>
             <Text style={styles.inputsTextLabel}>Dados Bancarios</Text>
             <FullInput
               professional
@@ -75,14 +69,14 @@ export default function Home(props) {
               name="CPF"
               onChangeText={(text) => console.log(text)}
             />
-          </View>
+          </Fragment>
         )}
       </View>
+
       <LargeButton
         onPress={() => props.navigation.navigate("ProfessionalNavigation")}
         business
-        text="ATUALIZAR DADOS"
-      />
+        text="ATUALIZAR DADOS"/>
     </View>
   );
 }

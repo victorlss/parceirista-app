@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, TouchableHighlight, TouchableOpacity } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
 import styles from './styles'
 import Icon from 'react-native-vector-icons/FontAwesome5'
 import { RectButton } from 'react-native-gesture-handler'
@@ -18,11 +18,11 @@ export default function DemandCard({purple}) {
           <Text style={styles.strongText}>Bolo no pote da Ana</Text>
           <Text style={styles.text}>Ana Lúcia Oliveira</Text>
           <Text style={styles.text}>(67) 1456346-45</Text>
-          <RectButton>
+          <RectButton> 
             <Text style={styles.orangeText}>
               <Icon name="check" size={13} color="#fd9644" /> Aceitar serviço
             </Text>
-          </RectButton>
+          </RectButton >
         </View>
       </View>
     )

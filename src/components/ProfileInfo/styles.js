@@ -16,7 +16,8 @@ const styles = StyleSheet.create({
         fontFamily: 'Raleway_400Regular',
         lineHeight: 21,
         color: '#778ca3',
-        marginLeft: 8
+        marginLeft: 8,
+        maxWidth: 121
     }
 })
 

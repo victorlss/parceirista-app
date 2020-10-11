@@ -35,7 +35,7 @@ export default function ProfessionalNavigation() {
         }}
       />
       <Screen
-        name="Perfil"
+        name="Services"
         component={Services}
         options={{
           tabBarLabel: 'Serviços',
