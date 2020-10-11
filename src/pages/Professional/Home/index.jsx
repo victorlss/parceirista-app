@@ -1,14 +1,15 @@
-import React, { useState } from "react";
-import { View, Text } from "react-native";
-import styles from "./style";
+import React, {Fragment, useState} from "react";
+import {View, Text, ScrollView} from "react-native";
 import Stars from "../../../components/Stars";
-import { RectButton, ScrollView } from "react-native-gesture-handler";
 import DemandCard from "../../../components/DemandCard";
 import ProfileHeader from "../../../components/ProfileHeader";
 import MediumButton from "../../../components/MediumButton";
+import styles from "./style";
+import WorkInProgress from "../../../components/WorkInProgress";
 
 export default function Home() {
-  const [isMeuTrabalho, setIsMeuTrabalho] = useState(false);
+  const [activeTab, setActiveTab] = useState(1);
+  const theme = 'professional'
 
   return (
     <View style={styles.containerWrapper}>
@@ -17,6 +18,7 @@ export default function Home() {
         url="https://avatars1.githubusercontent.com/u/54149914?s=460&u=e6a4306816a79fdcf1f4927c265ede6adcfb5a33&v=4"
         description={`Obrigado por ser um parceiro`}
       />
+
       <View style={styles.saldoContainerWrapper}>
         <Text style={styles.saldoTextLigth}>
           Saldo Total{'\n'}
@@ -24,37 +26,35 @@ export default function Home() {
         </Text>
         <View style={styles.starsWrapper}>
           <Text style={styles.textStars}>Minhas avaliações</Text>
-          <Stars />
+          <Stars/>
         </View>
       </View>
+
       <View style={styles.buttonsWrapper}>
-        <MediumButton
-          text="Receber Trabalhos"
-          isActive={isMeuTrabalho}
-          onPress={() => setIsMeuTrabalho(true)}
-        />
-        <MediumButton
-          text="Meus Trabalhos"
-          isActive={!isMeuTrabalho}
-          onPress={() => setIsMeuTrabalho(false)}
-        />
+        <MediumButton text="Receber Trabalhos" isActive={activeTab === 1} onPress={() => setActiveTab(1)}/>
+        <MediumButton text="Meus Trabalhos" isActive={activeTab === 2} onPress={() => setActiveTab(2)}/>
       </View>
-      <ScrollView
-        contentContainerStyle={{
-          paddingBottom: 16
-        }}
-      >
-        <DemandCard />
-        <DemandCard />
-        <DemandCard />
-        <DemandCard />
-        <DemandCard />
-        <DemandCard />
-        <DemandCard />
-        <DemandCard />
-        <DemandCard />
-        <DemandCard />
-        <DemandCard />
+
+      <ScrollView contentContainerStyle={{paddingBottom: 16}}>
+        {activeTab === 1 ? (
+          <Fragment>
+            <DemandCard/>
+            <DemandCard/>
+            <DemandCard/>
+            <DemandCard/>
+            <DemandCard/>
+            <DemandCard/>
+            <DemandCard/>
+            <DemandCard/>
+            <DemandCard/>
+            <DemandCard/>
+            <DemandCard/>
+          </Fragment>
+        ) : (
+          <Fragment>
+            <WorkInProgress theme={theme}/>
+          </Fragment>
+        )}
       </ScrollView>
     </View>
   )
