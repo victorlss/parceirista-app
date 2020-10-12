@@ -40,7 +40,7 @@ export default function ProfessionalNavigation() {
         options={{
           tabBarLabel: 'Serviços',
           tabBarIcon: ({color}) => {
-            return <Icon2 name="home-repair-service" size={18} color={color} />
+            return <Icon2 name="room-service" size={18} color={color} />
           }
         }}
       />
