@@ -17,7 +17,7 @@ export default function AddCard() {
       />
       <View style={styles.buttons}>
         <MediumButton
-          professional
+          professional 
           text="Pagamento"
           isActive
           onPress={() => setButtonActive(!buttonActive)}
