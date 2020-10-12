@@ -4,7 +4,9 @@ import styles from './styles'
 import Icon from 'react-native-vector-icons/FontAwesome5'
 import { RectButton } from 'react-native-gesture-handler'
 
-export default function DemandCard({purple}) {
+export default function DemandCard(props) {
+  const {purple, navigate} = props
+
   if (!purple) {
     return (
       <View style={styles.containerWrapper}>
@@ -18,7 +20,7 @@ export default function DemandCard({purple}) {
           <Text style={styles.strongText}>Bolo no pote da Ana</Text>
           <Text style={styles.text}>Ana Lúcia Oliveira</Text>
           <Text style={styles.text}>(67) 1456346-45</Text>
-          <RectButton> 
+          <RectButton>
             <Text style={styles.orangeText}>
               <Icon name="check" size={13} color="#fd9644" /> Aceitar serviço
             </Text>
@@ -41,7 +43,7 @@ export default function DemandCard({purple}) {
           <Text style={styles.strongText}>Serviços</Text>
           <Text style={styles.text}>Logomarca</Text>
           <Text style={styles.text}>Arte para instagram</Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigate()}>
             <Text style={styles.purpleText}>
               <Icon name="check" size={13} color="#a55eea" /> Solicitar serviço
             </Text>

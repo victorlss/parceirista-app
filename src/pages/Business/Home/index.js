@@ -6,7 +6,11 @@ import DemandCard from '../../../components/DemandCard'
 import CardScroll from '../../../components/CardScroll'
 import ProfileHeader from '../../../components/ProfileHeader'
 
-export default function Home() {
+export default function Index(props) {
+  const navigate = () => {
+    props.navigation.navigate('ServiceDetail')
+  }
+
   return (
     <View style={styles.containerWrapper}>
       <ProfileHeader />
@@ -33,16 +37,11 @@ export default function Home() {
           paddingTop: 5
         }}
       >
-        <DemandCard purple />
-        <DemandCard purple />
-        <DemandCard purple />
-        <DemandCard purple />
-        <DemandCard purple />
-        <DemandCard purple />
-        <DemandCard purple />
-        <DemandCard purple />
-        <DemandCard purple />
-        <DemandCard purple />
+        <DemandCard purple navigate={navigate} />
+        <DemandCard purple navigate={navigate} />
+        <DemandCard purple navigate={navigate} />
+        <DemandCard purple navigate={navigate} />
+        <DemandCard purple navigate={navigate} />
       </ScrollView>
     </View>
   )
