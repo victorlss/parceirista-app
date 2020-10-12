@@ -1,27 +1,14 @@
-import ENV from './env'
+import client from './client'
 
-const authApi = {
-  isLogged: () => authApi.user,
-  user: {},
+const login = (username, pass) => {
+  return client.request({
+    url: '/auth/login',
+    method: 'post',
+    data: JSON.stringify({
+      username: username,
+      pass: pass,
+    })
+  })
+}
 
-  login: (username, pass) => {
-    const config = {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        username: username,
-        pass: pass,
-      })
-    };
-    return fetch(`${ENV.API}/auth/login`, config)
-      .then((response) => response.json())
-      .then((response) => authApi.user = response)
-  },
-
-  logout: () => authApi.user = ({})
-};
-
-export default authApi
+export default {login}
