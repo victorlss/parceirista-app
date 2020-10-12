@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
   },
   formView: {
     marginTop: 16,
-    paddingHorizontal: 19,
+    paddingHorizontal: 20,
     justifyContent: 'flex-start'
   },
   textInput: {
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     paddingLeft: 20
   },
   buttonView: {
-    paddingHorizontal: 18,
+    paddingHorizontal: 20,
     marginTop: 20,
     marginBottom: 15,
     alignItems: 'center'

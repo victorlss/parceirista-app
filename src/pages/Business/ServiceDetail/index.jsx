@@ -1,11 +1,11 @@
 import React from 'react'
+import {connect} from "react-redux";
 import { Text, View } from 'react-native'
+import Icon from 'react-native-vector-icons/FontAwesome5'
+import LargeButton from '../../../components/LargeButton'
 import ServicesCard from '../../../components/ServicesCard'
 import Stars from '../../../components/Stars'
 import styles from './styles'
-import Icon from 'react-native-vector-icons/FontAwesome5'
-import LargeButton from '../../../components/LargeButton'
-import {connect} from "react-redux";
 
 const serviceCard ={
   'design-marketing': (
