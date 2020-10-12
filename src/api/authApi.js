@@ -1,6 +1,9 @@
 import ENV from './env'
 
 const authApi = {
+  isLogged: () => authApi.user,
+  user: {},
+
   login: (username, pass) => {
     const config = {
       method: 'POST',
@@ -13,17 +16,12 @@ const authApi = {
         pass: pass,
       })
     };
-    fetch(`${ENV.API}'/auth/login'`, config)
+    return fetch(`${ENV.API}/auth/login`, config)
       .then((response) => response.json())
-      .then((response) => console.log(response))
-      .then((response) => alert(JSON.stringify(response)))
+      .then((response) => authApi.user = response)
   },
 
-  logout: () =>
-    fetch(`${ENV.API}'/auth/logout'`)
-      .then((response) => response.json())
-      .then((response) => console.log(response))
-      .then((response) => alert(JSON.stringify(response)))
+  logout: () => authApi.user = ({})
 };
 
 export default authApi
