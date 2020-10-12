@@ -1,55 +1,53 @@
-import React from 'react'
-import { View, Text, TouchableOpacity } from 'react-native'
-import styles from './styles'
-import Icon from 'react-native-vector-icons/FontAwesome5'
-import { RectButton } from 'react-native-gesture-handler'
+import React, { useState } from "react";
+import { View, Text, TouchableOpacity } from "react-native";
+import styles from "./styles";
+import Icon from "react-native-vector-icons/FontAwesome5";
 
 export default function DemandCard(props) {
-  const {purple, navigate} = props
+  const {service, business, onPress, navigate} = props
 
-  if (!purple) {
-    return (
-      <View style={styles.containerWrapper}>
-        <View style={styles.leftCard}>
-          <Text style={styles.strongText}>Bolo no pote da Ana</Text>
-          <Text style={styles.text}>Ana Lúcia Oliveira</Text>
-          <Text style={styles.text}>(67) 1456346-45</Text>
-          <Text style={styles.text}>Acordo por porcentagem</Text>
-        </View>
-        <View style={styles.rigthCard}>
-          <Text style={styles.strongText}>Bolo no pote da Ana</Text>
-          <Text style={styles.text}>Ana Lúcia Oliveira</Text>
-          <Text style={styles.text}>(67) 1456346-45</Text>
-          <RectButton>
-            <Text style={styles.orangeText}>
-              <Icon name="check" size={13} color="#fd9644" /> Aceitar serviço
-            </Text>
-          </RectButton >
-        </View>
+  const isBusiness = business !== undefined;
+  const style = styles(isBusiness);
+  let services = [
+    {
+      name: "Design Marketing",
+      icon: "hands-helping",
+      id: "design-marketing",
+      services: ["Logo", "Capa para Instagram", "Plano de Marketing"],
+    },
+    {
+      name: "Planejamento de Negócio",
+      icon: "hands-helping",
+      id: "planejamento-negocio",
+      services: ["Plano de Negócio", "Precificação", "Estratégia de Negocio"],
+    },
+    {
+      name: "Contabilidade",
+      icon: "hands-helping",
+      id: "contabilidade",
+      services: ["Controle de Caixa", "Previsao de Lucro", "Impostos e Taxas"],
+    },
+  ];
+  const details = services.filter((x) => x.id == service.serviceId)[0].services;
+  return (
+    <TouchableOpacity style={style.containerWrapper} onPress={onPress}>
+      <View style={style.leftCard}>
+        <Text style={style.strongText}>{service.professional.name}</Text>
+        <Text style={style.text}>{service.description}</Text>
+        <Text style={style.text}>{service.professional.telefone}</Text>
       </View>
-    )
-  } else {
-    return (
-      <TouchableOpacity
-        style={styles.containerWrapper}
-        onPress={() => console.log('eu')}
-      >
-        <View style={styles.leftCard}>
-          <Text style={styles.strongText}>Priscila Alvez</Text>
-          <Text style={styles.text}>Design Marketing</Text>
-          <Text style={styles.text}>(67) 1456346-45</Text>
-        </View>
-        <View style={styles.rigthCard}>
-          <Text style={styles.strongText}>Serviços</Text>
-          <Text style={styles.text}>Logomarca</Text>
-          <Text style={styles.text}>Arte para instagram</Text>
-          <TouchableOpacity onPress={() => navigate()}>
-            <Text style={styles.purpleText}>
-              <Icon name="check" size={13} color="#a55eea" /> Solicitar serviço
-            </Text>
-          </TouchableOpacity>
-        </View>
-      </TouchableOpacity>
-    )
-  }
+      <View style={style.rigthCard}>
+        <Text style={style.strongText}>Serviços</Text>
+        {details.map((detail) => (
+          <Text style={style.text}>{detail}</Text>
+        ))}
+        <TouchableOpacity onPress={() => navigate()}>
+          <Text style={style.linkText}>
+            <Icon name="check" size={13} color={style.linkText.color} />{" "}
+            Solicitar serviço
+          </Text>
+        </TouchableOpacity>
+      </View>
+    </TouchableOpacity>
+  )
 }
