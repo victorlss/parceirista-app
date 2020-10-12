@@ -15,7 +15,7 @@ export default function Login(props) {
 
         setShowError(false)
         console.log(JSON.stringify(authApi.user));
-        props.navigation.navigate(authApi.user.userType == 'professional' ? "ProfessionalNavigation" : "BusinessNavigation");
+        props.navigation.navigate(authApi.user.userType === 'professional' ? "ProfessionalNavigation" : "BusinessNavigation");
       })
       .catch((err) => {
         setShowError(true)
@@ -34,12 +34,14 @@ export default function Login(props) {
 
       <View style={styles.formView}>
         <TextInput
-          placeholder="Email"
+          placeholder='Email'
+          keyboardType='email-address'
           style={styles.textInput}
           onChangeText={(text) => setUsername(text)}
         />
         <TextInput
-          placeholder="Senha"
+          placeholder='Senha'
+          secureTextEntry={true}
           style={styles.textInput}
           onChangeText={(text) => setPassword(text)}
         />
