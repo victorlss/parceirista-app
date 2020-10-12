@@ -1,30 +1,62 @@
-import React, {useState} from 'react'
-import {View} from 'react-native'
+import React, { useState } from 'react'
+import { View, Text } from 'react-native'
 import ProfileHeader from '../../../components/ProfileHeader'
 import FullInput from '../../../components/FullInput'
 import MediumButton from '../../../components/MediumButton'
 import styles from './styles'
 import LargeButton from '../../../components/LargeButton'
+import ServicesCard from '../../../components/ServicesCard'
+import Icon from 'react-native-vector-icons/FontAwesome5'
+import CardInfoPayments from '../../../components/CardInfoPayments'
 
 export default function AddCard() {
-  const [buttonActive, setButtonActive] = useState(false)
+  const [activeTab, setActiveTab] = useState(1)
   return (
     <View style={styles.container}>
-      <ProfileHeader/>
+      <ProfileHeader />
       <View style={styles.buttons}>
         <MediumButton
-          professional 
           text="Pagamento"
-          isActive
-          onPress={() => setButtonActive(!buttonActive)}
+          business
+          isActive={activeTab === 1}
+          onPress={() => setActiveTab(1)}
         />
-        <MediumButton professional text="Meu Cartão"/>
+        <MediumButton
+          business
+          text="Meu Cartão"
+          isActive={activeTab === 2}
+          onPress={() => setActiveTab(2)}
+        />
       </View>
-      <FullInput name="Número do cartão" business/>
-      <FullInput name="Nome impresso no cartão" business/>
-      <FullInput name="MM/AA" business/>
-      <FullInput name="CVV" business/>
-      <LargeButton professional text="ATUALIZAR DADOS"/>
+      {activeTab === 1 ? (
+        <View style={styles.paymentsTopView}>
+          <Text style={styles.TextTopInfo}>
+            Informar progresso de pagamento
+          </Text>
+          <View style={styles.serviceWrapper}>
+            <ServicesCard
+              icon={<Icon name="pencil-alt" size={20} color="#a55eea" />}
+              text="Design Marketing"
+            />
+          </View>
+          <CardInfoPayments />
+          <View style={styles.serviceWrapper}>
+            <ServicesCard
+              icon={<Icon name="calculator" size={20} color="#a55eea" />}
+              text="Contabilidabe"
+            />
+          </View>
+          <CardInfoPayments />
+        </View>
+      ) : (
+        <View style={styles.cardViewWrapper}>
+          <FullInput name="Número do cartão" business />
+          <FullInput name="Nome impresso no cartão" business />
+          <FullInput name="MM/AA" business />
+          <FullInput name="CVV" business />
+          <LargeButton business text="CADASTRAR DADOS" />
+        </View>
+      )}
     </View>
   )
 }
