@@ -49,6 +49,15 @@ const styles = StyleSheet.create({
     fontSize: 24,
     paddingLeft: 13
   },
+  linkText: {
+    fontFamily: 'Raleway_700Bold',
+    fontSize: 16,
+    color: '#778ca3',
+    marginTop: -7,
+    marginBottom: 50,
+    textAlign: 'center',
+    textDecorationLine: 'underline'
+  },
   footerText: {
     fontFamily: 'Raleway_400Regular',
     fontSize: 13,
