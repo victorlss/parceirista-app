@@ -1,20 +1,24 @@
-import React from 'react'
-import {Dimensions, Text, View} from 'react-native'
-import ProgressBar from '../ProgressBar';
-import styles from './styles'
+import React from "react";
+import { Dimensions, Text, View } from "react-native";
+import ProgressBar from "../ProgressBar";
+import styles from "./styles";
 import colors from "../../styles/colors";
 
 export default function WorkInProgress(props) {
-  const {theme} = props;
-  const style = styles(theme)
-  const fullSizeFactor = props.sizeFactor ? props.sizeFactor : 40
+  const { theme } = props;
+  const style = styles(theme);
+  const fullSizeFactor = props.sizeFactor ? props.sizeFactor : 40;
   return (
     <View>
       <View style={style.container}>
         <View style={style.leftView}>
-          <Text style={[style.text, style.textColorLeftView]}>Recebido</Text>
-          <Text style={[style.textBold, style.textColorLeftView]}>R$ 250,00</Text>
-          <ProgressBar progress={0.7} width={100} height={20} color='#fff'/>
+          <Text style={[style.text, style.textColorLeftView]}>
+            {props.leftTextTop ? props.leftTextTop : "Recebido"}
+          </Text>
+          <Text style={[style.textBold, style.textColorLeftView]}>
+            {props.date ? props.date : "R$ 250,00"}
+          </Text>
+          <ProgressBar progress={0.7} width={100} height={20} color="#fff" />
         </View>
         <View style={style.rigthView}>
           <Text style={style.textBold}>Multi Assessoria</Text>
@@ -28,7 +32,12 @@ export default function WorkInProgress(props) {
         <Text style={style.text}>Data da entrega: 19/10/2020</Text>
       </View>
 
-      <ProgressBar progress={0.6} height={30} width={Dimensions.get('window').width - fullSizeFactor} color={colors[theme].primary}/>
+      <ProgressBar
+        progress={0.6}
+        height={30}
+        width={Dimensions.get("window").width - fullSizeFactor}
+        color={colors[theme].primary}
+      />
     </View>
-  )
+  );
 }
