@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from "react";
+import { connect } from "react-redux";
 import { View, Text, ScrollView } from "react-native";
 import Stars from "../../../components/Stars";
 import DemandCard from "../../../components/DemandCard";
@@ -8,11 +9,13 @@ import contractApi from "../../../api/contractApi";
 import styles from "./style";
 import WorkInProgress from "../../../components/WorkInProgress";
 
-export default function Home() {
+function Home(props) {
+  const { user } = props;
   const [activeTab, setActiveTab] = useState(1);
   const theme = "professional";
   const [demands, setDemand] = useState([]);
-  contractApi.getAll("5f81fb67350dfd2270283a68").then((res) => setDemand(res));
+  contractApi.getAll(user._id).then((res) => setDemand(res));
+
 
   return (
     <View style={styles.containerWrapper}>
@@ -45,9 +48,11 @@ export default function Home() {
       <ScrollView contentContainerStyle={{ paddingBottom: 16 }}>
         {activeTab === 1 ? (
           <Fragment>
-            {demands.map((demand) => (
+            {demands.length > 0 ? demands.map((demand) => (
               <DemandCard key={demand._id} />
-            ))}
+            )) : (
+              <Text style={{fontSize:16, color:'lightgrey', textAlign: "center"}}>Sem demandas no momento {"\n"} Em breve você receberá propostas!</Text>
+            )}
           </Fragment>
         ) : (
           <Fragment>
@@ -58,3 +63,11 @@ export default function Home() {
     </View>
   );
 }
+
+const mapStateToProps = function (state) {
+  return {
+    user: state.user,
+  };
+};
+
+export default connect(mapStateToProps)(Home);
