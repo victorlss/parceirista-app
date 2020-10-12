@@ -7,7 +7,8 @@ import CardScroll from "../../../components/CardScroll";
 import ProfileHeader from "../../../components/ProfileHeader";
 import serviceApi from "../../../api/serviceApi";
 
-export default function Home() {
+export default function Home(props) {
+  const {navigation} = props
   const [categories, setCategories] = useState([{}, {}]);
   const [services, setServices] = useState([]);
   serviceApi.getCategories().then((res) => setCategories(res));
@@ -17,7 +18,7 @@ export default function Home() {
   }
 
   const navigate = () => {
-    props.navigation.navigate('ServiceDetail')
+    navigation.navigate('ServiceDetail')
   }
 
   return (
@@ -49,7 +50,7 @@ export default function Home() {
           paddingTop: 5,
         }}
       >
-        {services.map((service, i) => (
+        {services.map((service) => (
           <DemandCard key={service._id} service={service} navigate={navigate} business />
         ))}
       </ScrollView>
