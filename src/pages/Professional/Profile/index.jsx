@@ -78,7 +78,7 @@ function Profile(props) {
 
       <LargeButton
         onPress={() => props.navigation.navigate("ProfessionalNavigation")}
-        business
+        professional
         text="ATUALIZAR DADOS"/>
     </View>
   );

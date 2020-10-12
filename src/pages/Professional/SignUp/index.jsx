@@ -68,7 +68,7 @@ export default function SignUp(props) {
         />
       </View>
       <LargeButton
-        onPress={() => props.navigation.navigate('ProfessionalNavigation')}
+        onPress={() => props.navigation.navigate('ProfessionalWelcome')}
         text="SER UM PARCEIRO"
       />
     </ScrollView>

@@ -7,7 +7,7 @@ import colors from "../../styles/colors";
 export default function WorkInProgress(props) {
   const {theme} = props;
   const style = styles(theme)
-
+  const fullSizeFactor = props.sizeFactor ? props.sizeFactor : 40
   return (
     <View>
       <View style={style.container}>
@@ -28,7 +28,7 @@ export default function WorkInProgress(props) {
         <Text style={style.text}>Data da entrega: 19/10/2020</Text>
       </View>
 
-      <ProgressBar progress={0.6} height={30} width={Dimensions.get('window').width - 40} color={colors[theme].primary}/>
+      <ProgressBar progress={0.6} height={30} width={Dimensions.get('window').width - fullSizeFactor} color={colors[theme].primary}/>
     </View>
   )
 }
