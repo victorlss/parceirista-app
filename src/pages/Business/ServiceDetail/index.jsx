@@ -50,6 +50,9 @@ function ServiceDetail(props) {
     contractApi.create(payload)
       .then(response => console.log(response))
       .catch(err => console.error(err))
+
+    alert(`Solicitação enviada`)
+    props.navigation.navigate('Home')
   }
 
   return (

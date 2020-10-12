@@ -1,11 +1,12 @@
 import React, {Fragment, useState} from 'react'
 import {connect} from "react-redux";
-import {View, Text} from 'react-native'
+import { View, Text, Image} from 'react-native'
 import styles from './style'
 import LargeButton from '../../../components/LargeButton'
 import ProfileHeader from '../../../components/ProfileHeader'
 import FullInput from '../../../components/FullInput'
 import MediumButton from '../../../components/MediumButton'
+import getnet_logo from "../../../assets/images/getnet.png";
 
 function Profile(props) {
   const {user} = props
@@ -19,7 +20,7 @@ function Profile(props) {
 
       <View style={styles.buttonsWrapper}>
         <MediumButton text="Dados Pessoais" isActive={activeTab === 1} onPress={() => setActiveTab(1)}/>
-        <MediumButton text="Dados Bancarios" isActive={activeTab === 2} onPress={() => setActiveTab(2)}/>
+        <MediumButton text="Dados GetNet" isActive={activeTab === 2} onPress={() => setActiveTab(2)}/>
       </View>
 
       <View style={styles.inputsView}>
@@ -48,38 +49,38 @@ function Profile(props) {
               name="Email"
               onChangeText={(text) => setEmail(text)}
             />
+
+            <LargeButton
+              onPress={() => props.navigation.navigate("ProfessionalNavigation")}
+              professional
+              text="ATUALIZAR DADOS"/>
           </Fragment>
         ) : (
           <Fragment>
-            <Text style={styles.inputsTextLabel}>Dados Bancarios</Text>
-            <FullInput
+            <View style={{ alignContent: "center", alignItems: "center" }}>
+              <Image source={getnet_logo} resizeMode="contain" style={{width:'50%'}} />
+              <Text style={[styles.inputsTextLabel]}>
+                Conta sincronizada com a GETNET
+              </Text>
+              <Text
+                style={[
+                  styles.inputsTextLabel,
+                  { fontSize: 12, color: "#fd9644" },
+                ]}
+              >
+                Termo de Autorização Aceito
+              </Text>
+              <Text style={[styles.inputsTextLabel]}>
+                Data do aceite: 10/10/2020
+              </Text>
+            </View>
+            <LargeButton
               professional
-              name="Banco"
-              onChangeText={(text) => console.log(text)}
-            />
-            <FullInput
-              professional
-              name="Conta Corrente"
-              onChangeText={(text) => console.log(text)}
-            />
-            <FullInput
-              professional
-              name="Nome Completo"
-              onChangeText={(text) => console.log(text)}
-            />
-            <FullInput
-              professional
-              name="CPF"
-              onChangeText={(text) => console.log(text)}
+              text="ATUALIZAR INTEGRAÇÃO"
             />
           </Fragment>
         )}
       </View>
-
-      <LargeButton
-        onPress={() => props.navigation.navigate("ProfessionalNavigation")}
-        professional
-        text="ATUALIZAR DADOS"/>
     </View>
   );
 }

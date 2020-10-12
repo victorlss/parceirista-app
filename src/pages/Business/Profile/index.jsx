@@ -99,9 +99,6 @@ function Profile(props) {
               </Text>
             </View>
             <LargeButton
-              onPress={() =>
-                props.navigation.navigate("ProfessionalNavigation")
-              }
               business
               text="ATUALIZAR INTEGRAÇÃO"
             />

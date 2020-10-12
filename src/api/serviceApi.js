@@ -6,7 +6,7 @@ const serviceApi = {
     return [
       {
         name: 'Design Marketing',
-        icon: 'hands-helping',
+        icon: 'pencil-alt',
         id: 'design-marketing',
         services: [
           'Logo',
@@ -16,7 +16,7 @@ const serviceApi = {
       },
       {
         name: 'Planejamento de Negócio',
-        icon: 'hands-helping',
+        icon: 'user-tie',
         id: 'planejamento-negocio',
         services: [
           'Plano de Negócio',
@@ -26,7 +26,7 @@ const serviceApi = {
       },
       {
         name: 'Contabilidade',
-        icon: 'hands-helping',
+        icon: 'calculator',
         id: 'contabilidade',
         services: [
           'Controle de Caixa',
