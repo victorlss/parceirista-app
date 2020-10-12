@@ -11,7 +11,7 @@ export default function Progress() {
     <View style={styles.container}>
       <ProfileHeader />
       <View style={styles.paymentsTopView}>
-        <Text style={styles.TextTopInfo}>Informar progresso de pagamento</Text>
+        <Text style={styles.TextTopInfo}>Progresso de pagamento</Text>
         <View style={styles.serviceWrapper}></View>
         <CardInfoPayments name="Kauan Santos" orange color="#fd9644" />
         <View style={styles.serviceWrapper}></View>
