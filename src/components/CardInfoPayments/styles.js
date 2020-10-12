@@ -11,6 +11,16 @@ const styles = StyleSheet.create({
         paddingVertical: 6,
         justifyContent: 'space-between'
     },
+    containerOrange: {
+        width: '100%',
+        height: 85,
+        borderRadius: 4,
+        borderWidth: 1,
+        borderColor: '#fd9644',
+        paddingHorizontal: 8,
+        paddingVertical: 6,
+        justifyContent: 'space-between'
+    },
     topContent: {
         flexDirection: 'row',
         alignItems: 'center',
@@ -33,6 +43,14 @@ const styles = StyleSheet.create({
         height: 30,
         borderRadius: 4,
         backgroundColor: '#a55eea',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    boxDownContentOrange: {
+        width: 80,
+        height: 30,
+        borderRadius: 4,
+        backgroundColor: '#fd9644',
         alignItems: 'center',
         justifyContent: 'center'
     },

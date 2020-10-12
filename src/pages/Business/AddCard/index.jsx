@@ -39,14 +39,14 @@ export default function AddCard() {
               text="Design Marketing"
             />
           </View>
-          <CardInfoPayments />
+          <CardInfoPayments name="Kauan Santos" color="#a55eea" />
           <View style={styles.serviceWrapper}>
             <ServicesCard
               icon={<Icon name="calculator" size={20} color="#a55eea" />}
               text="Contabilidabe"
             />
           </View>
-          <CardInfoPayments />
+          <CardInfoPayments name="Priscila Alves" />
         </View>
       ) : (
         <View style={styles.cardViewWrapper}>
