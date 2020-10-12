@@ -4,13 +4,14 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import Home from '../pages/Professional/Home'
 import Profile from '../pages/Professional/Profile'
 import Rating from '../pages/Professional/Rating'
+import colors from '../styles/colors'
 
 export default function ProfessionalNavigation() {
   const {Navigator, Screen} = createBottomTabNavigator()
   return (
     <Navigator
       tabBarOptions={{
-        activeTintColor: '#fd9644'
+        activeTintColor: colors.professional.primary
       }}
     >
       <Screen

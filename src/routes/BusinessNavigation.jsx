@@ -6,6 +6,7 @@ import Home from '../pages/Business/Home'
 import Profile from '../pages/Business/Profile'
 import Services from '../pages/Business/Services'
 import AddCard from '../pages/Business/AddCard'
+import colors from '../styles/colors';
 
 function ProfessionalNavigation(props) {
   const {Navigator, Screen} = createBottomTabNavigator()
