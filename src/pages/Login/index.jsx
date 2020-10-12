@@ -11,24 +11,20 @@ function Login(props) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const login = () => {
-    authApi.login(username, password)
-      .then(() => {
-        if (!authApi.isLogged())
-          return setShowError(true);
+  const login = async () => {
+      authApi.login(username, password).then(response => {
+      const user = response.data
 
-        const user = authApi.user;
-        props.setUser(user)
-        setShowError(false)
+      if(!user._id)
+        throw 'User or password incorrect'
 
-        console.log(JSON.stringify(user));
-        props.navigation.navigate(user.userType === 'professional' ? "ProfessionalNavigation" : "BusinessNavigation");
-      })
-      .catch((err) => {
-        setShowError(true)
-        console.error(err)
-      });
-  };
+      props.setUser(user)
+      props.navigation.navigate(user.userType === 'professional' ? "ProfessionalNavigation" : "BusinessNavigation")
+    }).catch(err => {
+      console.log(err)
+      setShowError(true)
+    })
+  }
 
   return (
     <View style={styles.container}>
