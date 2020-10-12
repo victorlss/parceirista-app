@@ -4,10 +4,10 @@ const login = (username, pass) => {
   return client.request({
     url: '/auth/login',
     method: 'post',
-    data: JSON.stringify({
-      username: username,
-      pass: pass,
-    })
+    data: {
+      username,
+      pass,
+    }
   })
 }
 
