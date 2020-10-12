@@ -1,8 +1,8 @@
-const login = (payload) => (
+const setUser = (payload) => (
   {
-    type: 'LOGIN',
+    type: 'SET_USER',
     payload,
   }
 )
 
-export {login}
+export {setUser}

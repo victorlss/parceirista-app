@@ -1,30 +1,34 @@
 import React, { useState } from "react";
+import { connect } from 'react-redux';
 import { Image, Text, TextInput, TouchableOpacity, View } from "react-native";
+import {setUser} from '../../store/actions/userActions'
 import styles from "./styles";
 import logo from "../../assets/images/logo.png";
 import authApi from "../../api/authApi";
 
-export default function Login(props) {
+function Login(props) {
   const [showError, setShowError] = useState(false);
-  const login = () => {
-    console.log(username, password);
-    authApi
-      .login(username, password)
-      .then(() => {
-        if (!authApi.isLogged()) return setShowError(true);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
+  const login = () => {
+    authApi.login(username, password)
+      .then(() => {
+        if (!authApi.isLogged())
+          return setShowError(true);
+
+        const user = authApi.user;
+        props.setUser({isLoggedIn: true, user})
         setShowError(false)
-        console.log(JSON.stringify(authApi.user));
-        props.navigation.navigate(authApi.user.userType === 'professional' ? "ProfessionalNavigation" : "BusinessNavigation");
+
+        console.log(JSON.stringify(user));
+        props.navigation.navigate(user.userType === 'professional' ? "ProfessionalNavigation" : "BusinessNavigation");
       })
       .catch((err) => {
         setShowError(true)
-        console.log(JSON.stringify(err))
+        console.error(err)
       });
   };
-
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
 
   return (
     <View style={styles.container}>
@@ -68,3 +72,9 @@ export default function Login(props) {
     </View>
   );
 }
+
+const mapDispatchToProps = {
+  setUser: setUser,
+}
+
+export default connect(null, mapDispatchToProps)(Login);
