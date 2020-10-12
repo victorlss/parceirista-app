@@ -5,7 +5,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         backgroundColor: '#f8f9fa',
-        paddingBottom: 15
+        paddingBottom: 15,
+        marginTop: 50
     },
     logo: {
         height: 40,

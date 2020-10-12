@@ -20,7 +20,7 @@ function ProfileInfoName(props) {
           </Text>
         ) : (
           <TouchableOpacity onPress={() => props.navigation.navigate('Entrar')}>
-            <Text style={styles.nameTextUnlogged}>
+            <Text style={[styles.nameText, {color: '#778CA3'}]}>
               Entrar{' '}
               <Icon name="user-circle" size={14} color="#778CA3" />
             </Text>

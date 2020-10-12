@@ -8,7 +8,7 @@ import ProfileInfoName from "../ProfileInfoName";
 export default function ProfileHeader() {
   return (
     <Fragment>
-      <View style={[styles.container, {marginTop: 40}]}>
+      <View style={styles.container}>
         <Image style={styles.logo} resizeMode='stretch' source={logo}/>
         <ProfileInfoName />
       </View>

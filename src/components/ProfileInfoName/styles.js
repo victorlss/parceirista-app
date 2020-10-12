@@ -7,13 +7,6 @@ const styles = StyleSheet.create({
         lineHeight: 20,
         textAlign: 'right',
         marginTop: 12
-    },
-    nameTextUnlogged: {
-        fontFamily: 'Raleway_400Regular',
-        fontSize: 14,
-        lineHeight: 20,
-        textAlign: 'right',
-        marginTop: 12
     }
 })
 
