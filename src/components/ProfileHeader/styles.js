@@ -1,12 +1,15 @@
 import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
-    profileWrapper: {
-        marginTop: 50,
+    container: {
         flexDirection: 'row',
-        alignItems: 'center',
         justifyContent: 'space-between',
-        marginBottom: 11
+        backgroundColor: '#f8f9fa',
+        paddingBottom: 15
+    },
+    logo: {
+        height: 40,
+        width: 131
     },
 })
 

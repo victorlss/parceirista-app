@@ -16,11 +16,7 @@ export default function Home() {
 
   return (
     <View style={styles.containerWrapper}>
-      <ProfileHeader
-        name="Priscila Tavares"
-        url="https://avatars1.githubusercontent.com/u/54149914?s=460&u=e6a4306816a79fdcf1f4927c265ede6adcfb5a33&v=4"
-        description={`Obrigado por ser um parceiro`}
-      />
+      <ProfileHeader />
 
       <View style={styles.saldoContainerWrapper}>
         <Text style={styles.saldoTextLigth}>

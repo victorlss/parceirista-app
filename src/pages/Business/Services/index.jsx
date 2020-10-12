@@ -1,6 +1,6 @@
 import React from 'react'
 import { CheckBox, Text, View } from 'react-native'
-import ProfileHeaderSignUp from '../../../components/ProfileHeaderSignUp'
+import ProfileHeader from '../../../components/ProfileHeader'
 import ServicesCard from '../../../components/ServicesCard'
 import Stars from '../../../components/Stars'
 import styles from './styles'
@@ -10,7 +10,7 @@ import LargeButton from '../../../components/LargeButton'
 export default function Services() {
   return (
     <View style={styles.containerWrapper}>
-      <ProfileHeaderSignUp description="Crescimento para o seu negócio" />
+      <ProfileHeader />
       <View style={styles.servicesWrapper}>
         <ServicesCard
           icon={<Icon name="pencil-alt" size={20} color="#a55eea" />}

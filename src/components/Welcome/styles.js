@@ -2,7 +2,7 @@ import {StyleSheet} from "react-native";
 
 export default StyleSheet.create({
   welcomeView: {
-    marginTop: 40,
+    marginTop: 15,
     paddingHorizontal: 18
   },
   welcomeText: {

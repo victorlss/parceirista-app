@@ -9,7 +9,7 @@ import Services from '../pages/Business/Services'
 import colors from '../styles/colors';
 import Login from "../pages/Login";
 
-function ProfessionalNavigation(props) {
+function BusinessNavigation(props) {
   const {Navigator, Screen} = createBottomTabNavigator()
   return (
     <Navigator tabBarOptions={{activeTintColor: colors.business.primary}}>
@@ -22,7 +22,7 @@ function ProfessionalNavigation(props) {
         }}
       />
 
-      {props.user.isLoggedIn ? (
+      {props.user && props.user._id ? (
         <Screen
           name="Perfil"
           component={Profile}
@@ -68,4 +68,4 @@ const mapStateToProps = function (state) {
   }
 }
 
-export default connect(mapStateToProps)(ProfessionalNavigation);
+export default connect(mapStateToProps)(BusinessNavigation);

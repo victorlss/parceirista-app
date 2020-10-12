@@ -1,8 +1,22 @@
 import React from 'react'
-import { View } from 'react-native'
+import {connect} from "react-redux";
+import {View} from 'react-native'
 
-export default function Profile() {
+function Profile(props) {
+  const {user} = props
+  console.log(user)
+
   return (
-    <View></View>
+    <View>
+    </View>
   )
 }
+
+const mapStateToProps = function (state) {
+  return {
+    user: state.user
+  }
+}
+
+export default connect(mapStateToProps)(Profile);
+

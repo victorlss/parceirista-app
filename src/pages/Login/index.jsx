@@ -18,7 +18,7 @@ function Login(props) {
           return setShowError(true);
 
         const user = authApi.user;
-        props.setUser({isLoggedIn: true, user})
+        props.setUser(user)
         setShowError(false)
 
         console.log(JSON.stringify(user));
@@ -60,10 +60,7 @@ function Login(props) {
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => props.navigation.navigate("Login")}>
-          <Text
-            style={styles.text}
-            onPress={() => props.navigation.navigate("ProfessionalSignUp")}
-          >
+          <Text style={styles.text} onPress={() => props.navigation.navigate("BusinessSignUp")}>
             Quero ser um parceiro!{" "}
             <Text style={styles.linkText}>Cadastrar</Text>
           </Text>

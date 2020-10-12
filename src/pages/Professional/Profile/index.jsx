@@ -1,4 +1,5 @@
 import React, {Fragment, useState} from 'react'
+import {connect} from "react-redux";
 import {View, Text} from 'react-native'
 import styles from './style'
 import LargeButton from '../../../components/LargeButton'
@@ -6,15 +7,15 @@ import ProfileHeader from '../../../components/ProfileHeader'
 import FullInput from '../../../components/FullInput'
 import MediumButton from '../../../components/MediumButton'
 
-export default function Home(props) {
+function Profile(props) {
+  const {user} = props
   const [activeTab, setActiveTab] = useState(1);
+  const [name, setName] = useState(user.name);
+  const [email, setEmail] = useState(user.email);
 
   return (
     <View style={styles.containerWrapper}>
-      <ProfileHeader
-        name="Priscila Tavares"
-        url="https://avatars1.githubusercontent.com/u/54149914?s=460&u=e6a4306816a79fdcf1f4927c265ede6adcfb5a33&v=4"
-      />
+      <ProfileHeader/>
 
       <View style={styles.buttonsWrapper}>
         <MediumButton text="Dados Pessoais" isActive={activeTab === 1} onPress={() => setActiveTab(1)}/>
@@ -27,8 +28,9 @@ export default function Home(props) {
             <Text style={styles.inputsTextLabel}>Dados Pessoais</Text>
             <FullInput
               professional
+              value={name}
               name="Nome"
-              onChangeText={(text) => console.log(text)}
+              onChangeText={(text) => setName(text)}
             />
             <FullInput
               professional
@@ -42,8 +44,9 @@ export default function Home(props) {
             />
             <FullInput
               professional
+              value={email}
               name="Email"
-              onChangeText={(text) => console.log(text)}
+              onChangeText={(text) => setEmail(text)}
             />
           </Fragment>
         ) : (
@@ -80,3 +83,11 @@ export default function Home(props) {
     </View>
   );
 }
+
+const mapStateToProps = function (state) {
+  return {
+    user: state.user
+  }
+}
+
+export default connect(mapStateToProps)(Profile);

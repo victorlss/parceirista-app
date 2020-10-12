@@ -4,12 +4,12 @@ import styles from './style'
 import LineSeparator from '../../../components/LineSeparator'
 import DemandCard from '../../../components/DemandCard'
 import CardScroll from '../../../components/CardScroll'
-import ProfileHeaderSignUp from '../../../components/ProfileHeaderSignUp'
+import ProfileHeader from '../../../components/ProfileHeader'
 
 export default function Home() {
   return (
     <View style={styles.containerWrapper}>
-      <ProfileHeaderSignUp description='Crescimento para o seu negócio'/>
+      <ProfileHeader />
       <View style={styles.serviceView}>
         <Text style={styles.inputsTextLabel}>Serviços</Text>
         <Text style={styles.inputsTextDescription}>
