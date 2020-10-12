@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native'
+import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
   container: {
@@ -11,6 +11,13 @@ const styles = StyleSheet.create({
     flex: 0.4,
     paddingHorizontal: 35,
     justifyContent: 'flex-start'
+  },
+  sponsors: {
+    flex: 0.7,
+    paddingHorizontal: 35,
+    paddingVertical: 30,
+    justifyContent: 'center',
+    alignItems: "center",
   },
   logo: {
     width: '100%'

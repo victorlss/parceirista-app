@@ -4,7 +4,7 @@ import YoutubePlayer from "react-native-youtube-iframe"
 import LinkWithIcon from '../../../components/HyperlinkWithIcon'
 import WelcomeBar from "../../../components/WelcomeBar"
 import styles from './styles'
-import logoSebrae from "../../../assets/images/logo-sebrae.png"
+import logoSebrae from "../../../assets/images/sebrae.png"
 
 export default function Welcome(props) {
   const theme = 'business';

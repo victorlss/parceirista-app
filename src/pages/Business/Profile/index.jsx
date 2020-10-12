@@ -1,11 +1,12 @@
 import React, { Fragment, useState } from "react";
 import { connect } from "react-redux";
-import { View, Text } from "react-native";
+import { View, Text, Image } from "react-native";
 import styles from "./style";
 import LargeButton from "../../../components/LargeButton";
 import ProfileHeader from "../../../components/ProfileHeader";
 import FullInput from "../../../components/FullInput";
 import MediumButton from "../../../components/MediumButton";
+import getnet_logo from '../../../assets/images/getnet.png'
 
 function Profile(props) {
   const { user } = props;
@@ -81,6 +82,7 @@ function Profile(props) {
         ) : (
           <Fragment>
             <View style={{ alignContent: "center", alignItems: "center" }}>
+            <Image source={getnet_logo} resizeMode="contain" style={{width:'50%'}} />
               <Text style={[styles.inputsTextLabel]}>
                 Conta sincronizada com a GETNET
               </Text>
