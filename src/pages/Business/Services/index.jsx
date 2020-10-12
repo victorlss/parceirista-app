@@ -7,7 +7,7 @@ import styles from "./styles";
 import Icon from "react-native-vector-icons/FontAwesome5";
 import LargeButton from "../../../components/LargeButton";
 
-export default function Services({ service }) {
+export default function Services() {
   return (
     <View style={styles.containerWrapper}>
       <ProfileHeader />
@@ -18,9 +18,9 @@ export default function Services({ service }) {
         />
       </View>
       <View style={styles.ProfileInfoWrapper}>
-        <Text style={styles.strongText}>{service.name}</Text>
-        <Text style={styles.text}>{service.professional.telefone}</Text>
-        <Text style={styles.text}>{service.professional.email}</Text>
+        <Text style={styles.strongText}>Priscila alvez</Text>
+        <Text style={styles.text}>(67) 1456346-45</Text>
+        <Text style={styles.text}>priscila.design@gmail.com</Text>
       </View>
       <View style={styles.servicesViewWrapper}>
         <Text style={styles.textLabel}>Serviços</Text>

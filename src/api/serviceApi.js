@@ -36,7 +36,7 @@ const serviceApi = {
       },
     ]
   },
-  get: (serviceId) => {
+  get: async (serviceId) => {
     return fetch(`${ENV.API}/services/${serviceId}`)
       .then((response) => response.json())
       .then((response) => response.services)

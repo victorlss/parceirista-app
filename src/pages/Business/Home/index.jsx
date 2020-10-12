@@ -12,8 +12,9 @@ export default function Home() {
   const [services, setServices] = useState([]);
   serviceApi.getCategories().then((res) => setCategories(res));
 
-  const filter = (serviceId) =>
-    serviceApi.get(serviceId).then((res) => setServices(res));
+  const filter = (service) => {
+    serviceApi.get(service.id).then((res) => setServices(res));
+  }
 
   return (
     <View style={styles.containerWrapper}>
@@ -30,7 +31,7 @@ export default function Home() {
               business
               name={service.name}
               icon={service.icon}
-              onPress={() => filter(service.id)}
+              onPress={() => filter(service)}
             />
           ))}
         </ScrollView>
@@ -45,7 +46,7 @@ export default function Home() {
         }}
       >
         {services.map((service, i) => (
-          <DemandCard service={service} business key={`demand-${i}`} />
+          <DemandCard key={service._id} service={service} business />
         ))}
       </ScrollView>
     </View>
