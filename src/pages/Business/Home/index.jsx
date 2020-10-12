@@ -1,12 +1,20 @@
-import React from 'react'
-import { View, Text, ScrollView } from 'react-native'
-import styles from './style'
-import LineSeparator from '../../../components/LineSeparator'
-import DemandCard from '../../../components/DemandCard'
-import CardScroll from '../../../components/CardScroll'
-import ProfileHeader from '../../../components/ProfileHeader'
+import React, { useState } from "react";
+import { View, Text, ScrollView } from "react-native";
+import styles from "./style";
+import LineSeparator from "../../../components/LineSeparator";
+import DemandCard from "../../../components/DemandCard";
+import CardScroll from "../../../components/CardScroll";
+import ProfileHeader from "../../../components/ProfileHeader";
+import serviceApi from "../../../api/serviceApi";
 
 export default function Home() {
+  const [categories, setCategories] = useState([{}, {}]);
+  const [services, setServices] = useState([]);
+  serviceApi.getCategories().then((res) => setCategories(res));
+
+  const filter = (serviceId) =>
+    serviceApi.get(serviceId).then((res) => setServices(res));
+
   return (
     <View style={styles.containerWrapper}>
       <ProfileHeader />
@@ -16,12 +24,15 @@ export default function Home() {
           Selecione um serviço para filtrar
         </Text>
         <ScrollView horizontal={true}>
-          <CardScroll purple={true} />
-          <CardScroll purple={true} />
-          <CardScroll purple={true} />
-          <CardScroll purple={true} />
-          <CardScroll purple={true} />
-          <CardScroll purple={true} />
+          {categories.map((service, i) => (
+            <CardScroll
+              key={`service-${i}`}
+              business
+              name={service.name}
+              icon={service.icon}
+              onPress={() => filter(service.id)}
+            />
+          ))}
         </ScrollView>
       </View>
       <View style={styles.lineWrapper}>
@@ -30,20 +41,13 @@ export default function Home() {
       <ScrollView
         contentContainerStyle={{
           paddingBottom: 16,
-          paddingTop: 5
+          paddingTop: 5,
         }}
       >
-        <DemandCard purple />
-        <DemandCard purple />
-        <DemandCard purple />
-        <DemandCard purple />
-        <DemandCard purple />
-        <DemandCard purple />
-        <DemandCard purple />
-        <DemandCard purple />
-        <DemandCard purple />
-        <DemandCard purple />
+        {services.map((service, i) => (
+          <DemandCard service={service} business key={`demand-${i}`} />
+        ))}
       </ScrollView>
     </View>
-  )
+  );
 }

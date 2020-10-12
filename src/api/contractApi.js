@@ -20,7 +20,7 @@ const contractApi = {
       },
       body: JSON.stringify(example)
     };
-    return fetch(`${ENV.API}'/contracts`, config)
+    return fetch(`${ENV.API}/contracts`, config)
       .then((response) => response.json())
       .then((response) => console.log(response))
       .then((response) => alert(JSON.stringify(response)))
