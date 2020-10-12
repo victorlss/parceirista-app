@@ -5,6 +5,7 @@ import Home from '../pages/Professional/Home'
 import Profile from '../pages/Professional/Profile'
 import Rating from '../pages/Professional/Rating'
 import colors from '../styles/colors'
+import Progress from '../pages/Professional/Progress'
 
 export default function ProfessionalNavigation() {
   const {Navigator, Screen} = createBottomTabNavigator()
@@ -31,6 +32,16 @@ export default function ProfessionalNavigation() {
           tabBarLabel: 'Perfil',
           tabBarIcon: ({color}) => {
             return <Icon name="user-circle" size={18} color={color}/>
+          }
+        }}
+      />
+      <Screen
+        name="Progresso"
+        component={Progress}
+        options={{
+          tabBarLabel: 'Progresso',
+          tabBarIcon: ({color}) => {
+            return <Icon name="chart-line" size={18} color={color} />
           }
         }}
       />

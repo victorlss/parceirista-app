@@ -1,6 +1,7 @@
 import React from "react";
 import { CheckBox, Text, View } from "react-native";
 import ProfileHeader from "../../../components/ProfileHeader";
+import WorkInProgress from '../../../components/WorkInProgress'
 import ServicesCard from "../../../components/ServicesCard";
 import styles from "./styles";
 import Icon from "react-native-vector-icons/FontAwesome5";
@@ -15,7 +16,7 @@ export default function Services() {
           text="Design Marketing"
         />
       </View>
-      <Text>Adicionar aqui os serviços contratados</Text>
+      <WorkInProgress theme='business' leftTextTop='Entrega' date='Data: 19/10'/>
     </View>
   )
 }
