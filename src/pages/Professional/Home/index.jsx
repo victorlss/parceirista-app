@@ -1,6 +1,6 @@
-import React, { Fragment, useState } from "react";
-import { connect } from "react-redux";
-import { View, Text, ScrollView } from "react-native";
+import React, {Fragment, useState} from "react";
+import {connect} from "react-redux";
+import {View, Text, ScrollView} from "react-native";
 import Stars from "../../../components/Stars";
 import DemandCard from "../../../components/DemandCard";
 import ProfileHeader from "../../../components/ProfileHeader";
@@ -8,18 +8,22 @@ import MediumButton from "../../../components/MediumButton";
 import contractApi from "../../../api/contractApi";
 import styles from "./style";
 import WorkInProgress from "../../../components/WorkInProgress";
+import {setContract} from "../../../store/actions/contractActions";
 
 function Home(props) {
-  const { user } = props;
+  const theme = "professional"
+  const {user, contracts} = props
   const [activeTab, setActiveTab] = useState(1);
-  const theme = "professional";
-  const [demands, setDemand] = useState([]);
-  contractApi.getAll(user._id).then((res) => setDemand(res));
 
+  if (user._id) {
+    contractApi.getByUserId(user._id)
+      .then(response => setContract(response.data.contracts))
+      .catch(err => console.error(err))
+  }
 
   return (
     <View style={styles.containerWrapper}>
-      <ProfileHeader />
+      <ProfileHeader/>
 
       <View style={styles.saldoContainerWrapper}>
         <Text style={styles.saldoTextLigth}>
@@ -28,7 +32,7 @@ function Home(props) {
         </Text>
         <View style={styles.starsWrapper}>
           <Text style={styles.textStars}>Minhas avaliações</Text>
-          <Stars />
+          <Stars/>
         </View>
       </View>
 
@@ -45,29 +49,35 @@ function Home(props) {
         />
       </View>
 
-      <ScrollView contentContainerStyle={{ paddingBottom: 16 }}>
+      <ScrollView contentContainerStyle={{paddingBottom: 16}}>
         {activeTab === 1 ? (
           <Fragment>
-            {demands.length > 0 ? demands.map((demand) => (
-              <DemandCard key={demand._id} />
+            {contracts && contracts.length > 0 ? contracts.map((contract) => (
+              <DemandCard key={contract._id}/>
             )) : (
-              <Text style={{fontSize:16, color:'lightgrey', textAlign: "center"}}>Sem demandas no momento {"\n"} Em breve você receberá propostas!</Text>
+              <Text style={{fontSize: 16, color: 'lightgrey', textAlign: "center"}}>Sem demandas no momento {"\n"} Em
+                breve você receberá propostas!</Text>
             )}
           </Fragment>
         ) : (
           <Fragment>
-            <WorkInProgress theme={theme} />
+            <WorkInProgress theme={theme}/>
           </Fragment>
         )}
       </ScrollView>
     </View>
-  );
+  )
 }
 
 const mapStateToProps = function (state) {
   return {
-    user: state.user,
-  };
-};
+    contract: state.contract,
+    user: state.user
+  }
+}
 
-export default connect(mapStateToProps)(Home);
+const mapDispatchToProps = {
+  setContract: setContract,
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
