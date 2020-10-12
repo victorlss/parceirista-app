@@ -6,7 +6,14 @@ import styles from "./styles";
 import logo from "../../assets/images/logo.png";
 import authApi from "../../api/authApi";
 
+const redirectUser = (user, navigation) => {
+  return navigation.navigate(user.userType === 'professional' ? "ProfessionalNavigation" : "BusinessNavigation")
+}
+
 function Login(props) {
+  if(props.user && props.user._id)
+    redirectUser(props.user, props.navigation)
+
   const [showError, setShowError] = useState(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -19,7 +26,7 @@ function Login(props) {
         throw 'User or password incorrect'
 
       props.setUser(user)
-      props.navigation.navigate(user.userType === 'professional' ? "ProfessionalNavigation" : "BusinessNavigation")
+      redirectUser(user, props.navigation)
     }).catch(err => {
       console.log(err)
       setShowError(true)
@@ -66,8 +73,14 @@ function Login(props) {
   );
 }
 
+const mapStateToProps = function (state) {
+  return {
+    user: state.user
+  }
+}
+
 const mapDispatchToProps = {
   setUser: setUser,
 }
 
-export default connect(null, mapDispatchToProps)(Login);
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
