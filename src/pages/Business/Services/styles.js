@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
         marginTop: 4
     },
     userAvaliationsWrapper: {
-        marginTop: 19,
+        marginTop: 19
     },
     topUserAvaliationsWrapper: {
         flexDirection: 'row',
@@ -78,6 +78,29 @@ const styles = StyleSheet.create({
         fontFamily: 'Raleway_400Regular',
         fontSize: 11,
         lineHeight: 15
+    },
+    avaliationTopContent: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between'
+    },
+    avaliationWrapper: {
+        marginTop: 24,
+        marginBottom: 15
+    },
+    avaliationText: {
+        color: '#a55eea',
+        fontFamily: 'Raleway_700Bold',
+        fontSize: 16,
+        lineHeight: 15
+    },
+    avaliationDownContent: {
+        color: '#778ca3',
+        fontFamily: 'Raleway_400Regular',
+        fontSize: 12,
+        lineHeight: 15,
+        marginTop: 12,
+        overflow: 'hidden'
     }
 })
 

@@ -46,7 +46,7 @@ export default function AddCard() {
               text="Contabilidabe"
             />
           </View>
-          <CardInfoPayments name="Priscila Alves" />
+          <CardInfoPayments name="Priscila Alves" color="#a55eea" />
         </View>
       ) : (
         <View style={styles.cardViewWrapper}>
