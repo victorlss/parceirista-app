@@ -50,8 +50,8 @@ export default function Home(props) {
           paddingTop: 5,
         }}
       >
-        {services.map((service) => (
-          <DemandCard key={service._id} service={service} navigate={navigate} business />
+        {services.map((service, index) => (
+          <DemandCard key={index} service={service} navigate={navigate} business />
         ))}
       </ScrollView>
     </View>
