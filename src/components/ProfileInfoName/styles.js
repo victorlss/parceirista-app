@@ -5,12 +5,8 @@ const styles = StyleSheet.create({
         fontFamily: 'Raleway_700Bold',
         fontSize: 14,
         lineHeight: 20,
-        color: '#fd9644',
-        textAlign: 'right'
-    },
-    nameWrapper: {
-        maxWidth: 190,
-        overflow: 'hidden',
+        textAlign: 'right',
+        marginTop: 12
     }
 })
 

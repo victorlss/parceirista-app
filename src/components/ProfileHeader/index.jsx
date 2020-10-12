@@ -1,19 +1,18 @@
-import React from "react";
-import { Image, Text, View } from "react-native";
+import React, {Fragment} from "react";
+import {Image, View} from "react-native";
 import LineSeparator from "../LineSeparator";
-import ProfileInfo from "../ProfileInfo";
-import ProfileSignName from "../ProfileSignName";
-import Welcome from "../Welcome";
 import styles from "./styles";
+import logo from '../../assets/images/logo.png'
+import ProfileInfoName from "../ProfileInfoName";
 
-export default function ProfileHeader(props) {
+export default function ProfileHeader() {
   return (
-    <View>
-      <View style={styles.profileWrapper}>
-        <ProfileInfo uri={props.url} description={props.description} />
-        <ProfileSignName name={props.name} />
+    <Fragment>
+      <View style={styles.container}>
+        <Image style={styles.logo} resizeMode='stretch' source={logo}/>
+        <ProfileInfoName />
       </View>
-      <LineSeparator />
-    </View>
+      <LineSeparator/>
+    </Fragment>
   );
 }

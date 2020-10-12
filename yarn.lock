@@ -1836,6 +1836,13 @@
     invariant "^2.2.4"
     prop-types "^15.7.2"
 
+"@react-native-community/async-storage@^1.12.1":
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/@react-native-community/async-storage/-/async-storage-1.12.1.tgz#25f821b4f6b13abe005ad67e47c6f1cee9f27b24"
+  integrity sha512-70WGaH3PKYASi4BThuEEKMkyAgE9k7VytBqmgPRx3MzJx9/MkspwqJGmn3QLCgHLIFUgF1pit2mWICbRJ3T3lg==
+  dependencies:
+    deep-assign "^3.0.0"
+
 "@react-native-community/checkbox@^0.5.5":
   version "0.5.5"
   resolved "https://registry.yarnpkg.com/@react-native-community/checkbox/-/checkbox-0.5.5.tgz#2d980e9df794130b57b0637a787c945f78dea711"
@@ -2451,6 +2458,20 @@ aws4@^1.8.0:
   version "1.10.1"
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.10.1.tgz#e1e82e4f3e999e2cfd61b161280d16a111f86428"
   integrity sha512-zg7Hz2k5lI8kb7U32998pRRFin7zJlkfezGJjUc2heaD4Pw2wObakCDVzkKztTm/Ln7eiVvYsjqak0Ed4LkMDA==
+
+axios-retry@^3.1.9:
+  version "3.1.9"
+  resolved "https://registry.yarnpkg.com/axios-retry/-/axios-retry-3.1.9.tgz#6c30fc9aeb4519aebaec758b90ef56fa03fe72e8"
+  integrity sha512-NFCoNIHq8lYkJa6ku4m+V1837TP6lCa7n79Iuf8/AqATAHYB0ISaAS1eyIenDOfHOLtym34W65Sjke2xjg2fsA==
+  dependencies:
+    is-retry-allowed "^1.1.0"
+
+axios@^0.20.0:
+  version "0.20.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.20.0.tgz#057ba30f04884694993a8cd07fa394cff11c50bd"
+  integrity sha512-ANA4rr2BDcmmAQLOKft2fufrtuvlqR+cXNNinUmvfeSNCOF98PZL+7M/v1zIdGo7OLjEA9J2gXJL+j4zGsl0bA==
+  dependencies:
+    follow-redirects "^1.10.0"
 
 babel-jest@^25.5.1:
   version "25.5.1"
@@ -4043,6 +4064,11 @@ find-up@^4.0.0, find-up@^4.1.0:
     locate-path "^5.0.0"
     path-exists "^4.0.0"
 
+follow-redirects@^1.10.0:
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.13.0.tgz#b42e8d93a2a7eea5ed88633676d6597bc8e384db"
+  integrity sha512-aq6gF1BEKje4a9i9+5jimNFIpq4Q1WiwBToeRK5NvZBd/TRsmW8BsJfOEGkr76TbOyPVD3OVDN910EcUNtRYEA==
+
 fontfaceobserver@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/fontfaceobserver/-/fontfaceobserver-2.1.0.tgz#e2705d293e2c585a6531c2a722905657317a2991"
@@ -4650,6 +4676,11 @@ is-regex@^1.1.1:
   integrity sha512-1+QkEcxiLlB7VEyFtyBg94e08OAsvq7FUBgApTq/w2ymCLyKJgDPsybBENVtA7XCQEgEXxKPonG+mvYRxh/LIg==
   dependencies:
     has-symbols "^1.0.1"
+
+is-retry-allowed@^1.1.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/is-retry-allowed/-/is-retry-allowed-1.2.0.tgz#d778488bd0a4666a3be8a1482b9f2baafedea8b4"
+  integrity sha512-RUbUeKwvm3XG2VYamhJL1xFktgjvPzL0Hq8C+6yrWIswDy3BIXGqCxhxkc30N9jqK311gVU137K8Ei55/zVJRg==
 
 is-set@^2.0.1:
   version "2.0.1"
@@ -6868,8 +6899,6 @@ react-is@^16.12.0, react-is@^16.13.0, react-is@^16.7.0, react-is@^16.8.1, react-
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-<<<<<<< HEAD
-=======
 react-native-credit-card@^0.1.9:
   version "0.1.9"
   resolved "https://registry.yarnpkg.com/react-native-credit-card/-/react-native-credit-card-0.1.9.tgz#3d64a102590122ddcaeca701cd11b8235dd2fbb6"
@@ -6878,7 +6907,6 @@ react-native-credit-card@^0.1.9:
     payment "^2.0.3"
     react-native-flip-card "^3.3.0"
 
->>>>>>> feat/payments-page
 react-native-dotenv@^2.4.1:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/react-native-dotenv/-/react-native-dotenv-2.4.1.tgz#f15fa3e4a8821a92a4297ca0ef416d84409d6a32"
@@ -6886,8 +6914,6 @@ react-native-dotenv@^2.4.1:
   dependencies:
     dotenv "^8.0.0"
 
-<<<<<<< HEAD
-=======
 react-native-flip-card@^3.3.0:
   version "3.5.6"
   resolved "https://registry.yarnpkg.com/react-native-flip-card/-/react-native-flip-card-3.5.6.tgz#de26f0285aa6f8ee10bb4b696c60c6fb43bb580f"
@@ -6895,7 +6921,6 @@ react-native-flip-card@^3.3.0:
   dependencies:
     prop-types "^15.5.10"
 
->>>>>>> feat/payments-page
 react-native-gesture-handler@~1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-1.7.0.tgz#0ef74a5ba836832e497dc49eb1ce58baa6c617e5"

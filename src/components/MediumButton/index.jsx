@@ -4,7 +4,7 @@ import styles from "./style";
 import { RectButton, ScrollView } from "react-native-gesture-handler";
 
 export default function MediumButton(props) {
-  const isBusiness = props.professional != undefined
+  const isBusiness = props.business != undefined
   const buttonStyle = () => ({
       view: [styles(isBusiness).buttonView, props.isActive ? styles(isBusiness).activeView : {}],
       text: [styles(isBusiness).buttonText, props.isActive ? styles(isBusiness).activeText : {}],

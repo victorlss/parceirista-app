@@ -1,37 +1,35 @@
 import React from 'react'
-import { View, Image, Text, CheckBox, TouchableOpacity, ScrollView, TextInput } from 'react-native'
+import {View, Text, CheckBox, ScrollView, TextInput} from 'react-native'
 // import CheckBox from '@react-native-community/checkbox'
 import CardScroll from '../../../components/CardScroll'
 import LineSeparator from '../../../components/LineSeparator'
-import styles from './style'
 import Welcome from "../../../components/Welcome";
 import FullInput from '../../../components/FullInput'
 import LargeButton from '../../../components/LargeButton'
-import ProfileInfo from '../../../components/ProfileInfo'
+import styles from './style'
 
 export default function SignUp(props) {
   return (
     <ScrollView style={styles.container}>
-      <ProfileInfo url="https://avatars1.githubusercontent.com/u/54149914?s=460&u=e6a4306816a79fdcf1f4927c265ede6adcfb5a33&v=4" />
       <View style={styles.welcomeView}>
-        <Welcome />
-        <LineSeparator />
+        <Welcome/>
+        <LineSeparator/>
       </View>
       <View style={styles.inputsView}>
         <Text style={styles.inputsTextLabel}>Dados Pessoais</Text>
-        <FullInput 
+        <FullInput
           name="Nome"
           onChangeText={(text) => console.log(text)}
         />
-        <FullInput 
+        <FullInput
           name="CPF/CNPJ"
           onChangeText={(text) => console.log(text)}
         />
-        <FullInput 
+        <FullInput
           name="Telefone"
           onChangeText={(text) => console.log(text)}
         />
-        <FullInput 
+        <FullInput
           name="Email"
           onChangeText={(text) => console.log(text)}
         />

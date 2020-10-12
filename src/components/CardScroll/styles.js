@@ -1,42 +1,30 @@
 import { StyleSheet } from 'react-native'
+import colors from '../../styles/colors'
 
-const styles = StyleSheet.create({
-    cardWrapper: {
-        backgroundColor: '#ffe2cb',
-        width: 110,
-        height: 120,
-        marginRight: 10,
-        overflow: 'hidden',
-        alignItems: 'center'
-    },
-    textInfo: {
-        color: '#fd9644',
-        fontFamily: 'Raleway_700Bold',
-        maxWidth: 70,
-        fontSize: 13,
-        paddingTop: 20
-    },
-    iconWrapper: {
-        paddingTop: 10
-    },
-    cardWrapperPurple: {
-        backgroundColor: '#e9d4fd',
-        width: 110,
-        height: 120,
-        marginRight: 10,
-        overflow: 'hidden',
-        alignItems: 'center'
-    },
-    textInfoPurple: {
-        color: '#a55eea',
-        fontFamily: 'Raleway_700Bold',
-        maxWidth: 70,
-        fontSize: 13,
-        paddingTop: 20
-    },
-    iconWrapperPurple: {
-        paddingTop: 10
-    }
-})
+const styles = (isBusiness) => {
+    const text = isBusiness ? "#a55eea" : '#fd9644'
+    const background = isBusiness ? '#e9d4fd' : '#ffe2cb'
+
+    return StyleSheet.create({
+        cardWrapper: {
+            backgroundColor: background,
+            width: 120,
+            height: 120,
+            marginRight: 10,
+            overflow: 'hidden',
+            alignItems: 'center'
+        },
+        textInfo: {
+            color: text,
+            fontFamily: 'Raleway_700Bold',
+            maxWidth: 90,
+            fontSize: 13,
+            paddingTop: 20
+        },
+        iconWrapper: {
+            paddingTop: 10
+        },
+    })
+}
 
 export default styles
