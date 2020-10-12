@@ -4,6 +4,9 @@
   "expo": {
     "name": "Parceirista",
     "slug": "Parceirista",
+    "splash": {
+      "image": "./src/assets/splash.png"
+    },
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
