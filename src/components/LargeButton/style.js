@@ -4,6 +4,7 @@ import colors from '../../styles/colors'
 const styles = (isBusiness) => {
     const primary = colors.type(isBusiness).primary
     const primaryLight = colors.type(isBusiness).primaryLight
+    const primaryBackground = colors.type(isBusiness).primaryBackground
 
     return StyleSheet.create({
         containerWrapper: {
@@ -20,7 +21,7 @@ const styles = (isBusiness) => {
         buttonWrapper: {
             width: 320,
             height: 55,
-            backgroundColor: '#ffe2cb',
+            backgroundColor: primaryBackground,
             justifyContent: 'center',
             alignItems: 'center',
             borderRadius: 4

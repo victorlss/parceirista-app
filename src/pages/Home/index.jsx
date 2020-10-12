@@ -14,7 +14,7 @@ export default function Home(props) {
 
       <View style={styles.bottomView}>
         <TouchableOpacity style={[styles.button, {backgroundColor: colors.business.primaryLight}]}
-          onPress={() => props.navigation.navigate('BusinessSignUp')}>
+          onPress={() => props.navigation.navigate('BusinessNavigation')}>
           <View style={[styles.buttonIcon, {backgroundColor: colors.business.primary}]}>
             <Icon name="search-dollar" size={20} color="#fff"/>
           </View>
