@@ -6,6 +6,7 @@ import LargeButton from '../../../components/LargeButton'
 import ServicesCard from '../../../components/ServicesCard'
 import Stars from '../../../components/Stars'
 import styles from './styles'
+import contractApi from "../../../api/contractApi";
 
 const serviceCard ={
   'design-marketing': (
@@ -28,8 +29,28 @@ const serviceCard ={
   )
 }
 
+const buildContractPayload = (service, user) => {
+  return {
+    serviceId: service._id,
+    businessId: user._id,
+    professionalId: service.professional._id,
+    fee: 10,
+    discount: 0,
+    deliverAt: '2020-11-10',
+    deliveredAt: null
+  }
+}
+
 function ServiceDetail(props) {
   const {professional, serviceId, services} = props.service
+
+  const requestService = () => {
+    const payload = buildContractPayload(props.service, props.user)
+
+    contractApi.create(payload)
+      .then(response => console.log(response))
+      .catch(err => console.error(err))
+  }
 
   return (
     <View style={styles.containerWrapper}>
@@ -49,7 +70,7 @@ function ServiceDetail(props) {
           </View>
         ))}
       </View>
-      <LargeButton text="SOLICITAR SERVIÇO" business />
+      <LargeButton text="SOLICITAR SERVIÇO" business onPress={() => requestService()} />
 
       <View style={styles.avaliationsWrapper}>
         <Text style={[styles.textLabel, styles.starsWrapper]}>Avaliações</Text>
@@ -84,7 +105,8 @@ function ServiceDetail(props) {
 
 const mapStateToProps = function (state) {
   return {
-    service: state.service
+    service: state.service,
+    user: state.user
   }
 }
 
