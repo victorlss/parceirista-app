@@ -46,11 +46,13 @@ function Profile(props) {
             <FullInput
               business
               name="CPF/CNPJ"
+              value={'75.889.485/0001-15'}
               onChangeText={(text) => console.log(text)}
             />
             <FullInput
               business
               name="Telefone"
+              value={'(11) 98522-5454'}
               onChangeText={(text) => console.log(text)}
             />
             <FullInput
@@ -69,6 +71,7 @@ function Profile(props) {
             <FullInput
               business
               name="CPF"
+              value={'794.472.670-09'}
               onChangeText={(text) => console.log(text)}
             />
             <LargeButton

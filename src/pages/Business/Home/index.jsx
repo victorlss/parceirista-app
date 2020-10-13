@@ -9,12 +9,22 @@ import serviceApi from "../../../api/serviceApi";
 
 export default function Home(props) {
   const {navigation} = props
-  const [categories, setCategories] = useState([{}, {}]);
+  const [categories, setCategories] = useState([]);
   const [services, setServices] = useState([]);
-  serviceApi.getCategories().then((res) => setCategories(res));
+
+  if (categories.length == 0) {
+    serviceApi.getCategories().then((res) => {
+      filter(res[0])
+      setCategories(res)
+    });
+  }
+
 
   const filter = (service) => {
-    serviceApi.get(service.id).then((res) => setServices(res));
+    if (service)
+    serviceApi.get(service.id).then((res) => {
+      setServices(res)
+    });
   }
 
   const navigate = () => {

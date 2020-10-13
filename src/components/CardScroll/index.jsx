@@ -4,10 +4,10 @@ import styles from "./styles";
 import Icon from "react-native-vector-icons/FontAwesome5";
 import { RectButton } from "react-native-gesture-handler";
 
-export default function CardScroll({ business, name, icon, onPress }) {
+export default function CardScroll({ business, name, icon, onPress, style }) {
   const isBusiness = business !== undefined;
   return (
-    <RectButton style={styles(isBusiness).cardWrapper} onPress={onPress}>
+    <RectButton style={[styles(isBusiness).cardWrapper, style]} onPress={onPress}>
       <Icon
         style={styles(isBusiness).iconWrapper}
         name="hands-helping"

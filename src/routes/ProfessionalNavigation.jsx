@@ -35,16 +35,6 @@ export default function ProfessionalNavigation() {
           }
         }}
       />
-      <Screen
-        name="Progresso"
-        component={Progress}
-        options={{
-          tabBarLabel: 'Progresso',
-          tabBarIcon: ({color}) => {
-            return <Icon name="chart-line" size={18} color={color} />
-          }
-        }}
-      />
     </Navigator>
   )
 }

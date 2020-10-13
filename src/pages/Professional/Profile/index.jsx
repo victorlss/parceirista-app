@@ -36,11 +36,13 @@ function Profile(props) {
             <FullInput
               professional
               name="CPF/CNPJ"
+              value={'508.675.990-06'}
               onChangeText={(text) => console.log(text)}
             />
             <FullInput
               professional
               name="Telefone"
+              value={'(11) 98777-7777'}
               onChangeText={(text) => console.log(text)}
             />
             <FullInput

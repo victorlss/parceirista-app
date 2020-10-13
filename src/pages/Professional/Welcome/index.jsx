@@ -18,7 +18,7 @@ function Welcome(props) {
   return (
     <Fragment>
       <WelcomeBar theme={theme}>
-        <Text style={styles.welcomeTextBold}>Parcerista, Francisco.</Text>
+        <Text style={styles.welcomeTextBold}>Parcerista, Emerson Souza.</Text>
       </WelcomeBar>
       <ScrollView style={styles.container}>
         <Text style={[styles.text, { marginTop: 20 }]}>

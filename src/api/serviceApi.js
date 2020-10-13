@@ -2,7 +2,7 @@ import ENV from './env'
 
 const serviceApi = {
   getCategories: async () => {
-    await sleep(1000)
+    await sleep(500)
     return [
       {
         name: 'Design Marketing',

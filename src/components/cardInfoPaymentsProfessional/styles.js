@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native'
 const styles = StyleSheet.create({
     container: {
         width: '100%',
-        height: 120,
+        height: 85,
         borderRadius: 4,
         borderWidth: 1,
         borderColor: '#a55eea',
@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     },
     containerOrange: {
         width: '100%',
-        height: 120,
+        height: 85,
         borderRadius: 4,
         borderWidth: 1,
         borderColor: '#fd9644',
