@@ -1,0 +1,80 @@
+const mock = [
+  {
+    "_id": "5f84bc58a5ec1e00170315e3",
+    "serviceId": "5f84a11d090f303c80879613",
+    "businessId": "5f83b6bdf85f8c44d8ad9f21",
+    "professionalId": "5f83b6a3f85f8c44d8ad9f20",
+    "fee": 10,
+    "discount": "0",
+    "deliverAt": "2020-11-10",
+    "deliveredAt": null,
+    "createdAt": "2020-10-12T20:28:08.087Z",
+    "updatedAt": "2020-10-12T20:28:08.087Z",
+    "__v": 0,
+    service: {
+      "_id": "5f84a11d090f303c80879613",
+      "serviceId": "design-marketing",
+      "professionalId": "5f83b6a3f85f8c44d8ad9f20",
+      "description": "Pacote Design Marketing",
+      "deliveryDeadInDays": 30,
+      "paymentDeadInDays": 90,
+      "createdAt": "2020-10-12T18:31:57.047Z",
+      "updatedAt": "2020-10-12T18:31:57.047Z",
+      "__v": 0,
+      business: {
+        "_id": "5f83b6bdf85f8c44d8ad9f21",
+        "name": "Bolo de Vó",
+        "address": "Avenida das Americas, 1252, Parque da Mooca, Mooca, SP",
+        "bithday": "1960-01-01T00:00:00.000Z",
+        "cpf": "111.222.333.42-42",
+        "cnpj": "11.22.1111-43",
+        "email": "empresa@gmail.com",
+        "telefone": "(11) 98522-5454",
+        "userType": "business",
+        "createdAt": "2020-10-12T01:51:57.238Z",
+        "updatedAt": "2020-10-12T01:51:57.238Z",
+        "__v": 0
+      }
+    },
+  },
+  {
+    "_id": "5f84bf0ca5ec1e00170315e4",
+    "serviceId": "5f84a11d090f303c80879613",
+    "businessId": "5f83b6bdf85f8c44d8ad9f21",
+    "professionalId": "5f83b6a3f85f8c44d8ad9f20",
+    "fee": 10,
+    "discount": "0",
+    "deliverAt": "2020-11-10",
+    "deliveredAt": null,
+    "createdAt": "2020-10-12T20:39:40.581Z",
+    "updatedAt": "2020-10-12T20:39:40.581Z",
+    "__v": 0,
+    service: {
+      "_id": "5f84a11d090f303c80879613",
+      "serviceId": "design-marketing",
+      "professionalId": "5f83b6a3f85f8c44d8ad9f20",
+      "description": "Pacote Design Marketing",
+      "deliveryDeadInDays": 30,
+      "paymentDeadInDays": 90,
+      "createdAt": "2020-10-12T18:31:57.047Z",
+      "updatedAt": "2020-10-12T18:31:57.047Z",
+      "__v": 0,
+      business: {
+        "_id": "5f849eaa090f303c80879608",
+        "name": "Warren Buffett",
+        "address": "Rua das Palmeiras, 202, Sao Paulo - SP",
+        "bithday": "1990-01-01T00:00:00.000Z",
+        "cpf": "000.444.222.42-42",
+        "cnpj": "11.191.1111-23",
+        "email": "warren@gmail.com",
+        "telefone": "(11) 98877-1111",
+        "userType": "professional",
+        "createdAt": "2020-10-12T18:21:30.473Z",
+        "updatedAt": "2020-10-12T18:21:30.473Z",
+        "__v": 0
+      }
+    },
+  }
+]
+
+export default mock

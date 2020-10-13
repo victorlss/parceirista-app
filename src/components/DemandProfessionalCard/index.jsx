@@ -26,7 +26,7 @@ const services = [
   }
 ]
 
-function DemandCard(props) {
+function DemandProfessionalCard(props) {
   const {service, business, navigate} = props
 
   if (!service) {
@@ -41,27 +41,22 @@ function DemandCard(props) {
   const style = styles(isBusiness);
   const details = services.filter((x) => x.id === service.serviceId)[0].services;
 
-  const requestService = () => {
-    props.setService({...service, services: details})
-    navigate()
-  }
-
   return (
     <View style={style.containerWrapper}>
       <View style={style.leftCard}>
-        <Text style={style.strongText}>{service.professional.name}</Text>
+        <Text style={style.strongText}>{service.business.name}</Text>
         <Text style={style.text}>{service.description}</Text>
-        <Text style={style.text}>{service.professional.telefone}</Text>
+        <Text style={style.text}>{service.business.telefone}</Text>
       </View>
       <View style={style.rigthCard}>
         <Text style={style.strongText}>Serviços</Text>
         {details.map((detail, index) => (
           <Text key={index} style={style.text}>{detail}</Text>
         ))}
-        <TouchableOpacity onPress={() => requestService()}>
+        <TouchableOpacity>
           <Text style={style.linkText}>
             <Icon name="check" size={13} color={style.linkText.color}/>{" "}
-            Solicitar serviço
+            Aceitar serviço
           </Text>
         </TouchableOpacity>
       </View>
@@ -73,4 +68,4 @@ const mapDispatchToProps = {
   setService: setService,
 }
 
-export default connect(null, mapDispatchToProps)(DemandCard);
+export default connect(null, mapDispatchToProps)(DemandProfessionalCard);

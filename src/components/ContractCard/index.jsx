@@ -29,14 +29,6 @@ const services = [
 function DemandCard(props) {
   const {service, business, navigate} = props
 
-  if (!service) {
-    return (
-      <View>
-        <ActivityIndicator />
-      </View>
-    )
-  }
-
   const isBusiness = business !== undefined;
   const style = styles(isBusiness);
   const details = services.filter((x) => x.id === service.serviceId)[0].services;
@@ -61,7 +53,7 @@ function DemandCard(props) {
         <TouchableOpacity onPress={() => requestService()}>
           <Text style={style.linkText}>
             <Icon name="check" size={13} color={style.linkText.color}/>{" "}
-            Solicitar serviço
+            Aceitar serviço
           </Text>
         </TouchableOpacity>
       </View>

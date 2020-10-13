@@ -1,25 +1,16 @@
-import React, {Fragment, useState} from "react";
-import {connect} from "react-redux";
+import React, {Fragment, useEffect, useState} from "react";
 import {View, Text, ScrollView} from "react-native";
 import Stars from "../../../components/Stars";
-import DemandCard from "../../../components/DemandCard";
+import DemandProfessionalCard from "../../../components/DemandProfessionalCard";
 import ProfileHeader from "../../../components/ProfileHeader";
 import MediumButton from "../../../components/MediumButton";
-import contractApi from "../../../api/contractApi";
 import styles from "./style";
 import WorkInProgress from "../../../components/WorkInProgress";
-import {setContract} from "../../../store/actions/contractActions";
+import contracts from './contract.mock'
 
-function Home(props) {
+export default function Home(props) {
   const theme = "professional"
-  const {user, contracts} = props
   const [activeTab, setActiveTab] = useState(1);
-
-  if (user._id) {
-    contractApi.getByUserId(user._id)
-      .then(response => setContract(response.data.contracts))
-      .catch(err => console.error(err))
-  }
 
   return (
     <View style={styles.containerWrapper}>
@@ -52,8 +43,8 @@ function Home(props) {
       <ScrollView contentContainerStyle={{paddingBottom: 16}}>
         {activeTab === 1 ? (
           <Fragment>
-            {contracts && contracts.length > 0 ? contracts.map((contract) => (
-              <DemandCard key={contract._id}/>
+            {contracts && contracts.length > 0 ? contracts.map((contract, index) => (
+              <DemandProfessionalCard key={index} service={contract.service}/>
             )) : (
               <Text style={{fontSize: 16, color: 'lightgrey', textAlign: "center"}}>Sem demandas no momento {"\n"} Em
                 breve você receberá propostas!</Text>
@@ -68,16 +59,3 @@ function Home(props) {
     </View>
   )
 }
-
-const mapStateToProps = function (state) {
-  return {
-    contract: state.contract,
-    user: state.user
-  }
-}
-
-const mapDispatchToProps = {
-  setContract: setContract,
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Home);

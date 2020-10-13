@@ -32,6 +32,7 @@ const serviceCard ={
 const buildContractPayload = (service, user) => {
   return {
     serviceId: service._id,
+    service: service._id,
     businessId: user._id,
     professionalId: service.professional._id,
     fee: 10,

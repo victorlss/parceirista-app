@@ -40,6 +40,11 @@ const serviceApi = {
     return fetch(`${ENV.API}/services/${serviceId}`)
       .then((response) => response.json())
       .then((response) => response.services)
+  },
+  getByProfessionalId: async (professionalId) => {
+    return fetch(`${ENV.API}/services/professional/${professionalId}`)
+      .then((response) => response.json())
+      .then((response) => response.services)
   }
 };
 

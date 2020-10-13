@@ -1,11 +1,11 @@
 const initialState = {
-  contracts: []
+  list: {}
 }
 
 const contractReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'SET_CONTRACTS':
-      return {...state, ...action.payload};
+    case 'SET_CONTRACT':
+      return {...state, ...action.payload}
     default:
       return state
   }

@@ -45,16 +45,6 @@ export default function ProfessionalNavigation() {
           }
         }}
       />
-      <Screen
-        name="Avaliações"
-        component={Rating}
-        options={{
-          tabBarLabel: 'Avaliações',
-          tabBarIcon: ({color}) => {
-            return <Icon name="star" size={18} color={color}/>
-          }
-        }}
-      />
     </Navigator>
   )
 }

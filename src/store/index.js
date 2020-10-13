@@ -1,7 +1,7 @@
 import { createStore, combineReducers } from 'redux';
+import contractReducer from "./reducers/contractReducer";
 import serviceReducer from "./reducers/serviceReducer";
 import userReducer from './reducers/userReducer'
-import contractReducer from "./reducers/contractReducer";
 
 const reducers = combineReducers({
   contract: contractReducer,
