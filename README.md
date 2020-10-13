@@ -8,7 +8,7 @@ Gerando demanda para profissionais de diversas áreas ao mesmo tempo que garante
 ### TECNOLOGIA
 #### REACT NATIVE + EXPO
 Com React Native e EXPO garantimos a criação de uma aplição robusta, estável e de fácil manutenção,com grande suporte para expansão de funcionalidades.
-#### NODE + EXPRESS ([Repositório do BFF (backend for frontend)](https://github.com/victorlss/parceirista-bff))
+#### NODE + EXPRESS ([Repositório do BFF](https://github.com/victorlss/parceirista-bff))
 Com esta stack conseguimos garantir uma aplicação leve com capacidades elásticas, podendo ser fácilmente dockerizada e orquestrada com Kubernetes.
 #### MONGODB
 NoSQL mais famoso do momento, consegue suportar gigantescos fluxos de dados. Nos dá a flexibilidade de tanto ter collections com schema definido, mas caso necessário flexibilidade para adotar estruturas schemaless.
